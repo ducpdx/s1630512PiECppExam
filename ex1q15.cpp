@@ -10,16 +10,18 @@ void modTest(double &n);
 
 int main( ){
   int i;
-  std::vector<double> v = {pow(10,3),pow(10,4)};
+  std::vector<double> v = {5,10};
+  //std::vector<double> v = {pow(10,3),pow(10,4)};
+  std::vector<double> v = {pow(10,3),pow(10,4),pow(10,4),pow(10,6)};
   //v.push_back(pow(10,3)); use this if compiler does not support c++11 and above
   
   std::ofstream fileOutbF, fileOutbFM, fileOutmT;
   fileOutbF.open("bFtimer.txt");
   fileOutbFM.open("bFMtimer.txt");
   fileOutmT.open("mTtimer.txt");
-  fileOutbF << "%column 1: no of prime numbers" << std::endl << "%column 2: run time";
-  fileOutbFM << "%column 1: no of prime numbers" << std::endl << "%column 2: run time";
-  fileOutmT << "%column 1: no of prime numbers" << std::endl << "%column 2: run time";
+  fileOutbF << "%column 1: no of prime numbers" << std::endl << "%column 2: run time"<<std::endl;
+  fileOutbFM << "%column 1: no of prime numbers" << std::endl << "%column 2: run time"<<std::endl;
+  fileOutmT << "%column 1: no of prime numbers" << std::endl << "%column 2: run time"<<std::endl;
 
   for (i = 0; i < v.size(); i++) {
     std::chrono::time_point<std::chrono::system_clock> start, end;
@@ -27,7 +29,7 @@ int main( ){
     bruteForce(v[i]);
     end = std::chrono::system_clock::now();
     std::chrono::duration<double> elapsed_seconds = end-start;
-    fileOut << v[i] << "\t" << elapsed_seconds.count() << std::endl;
+    fileOutbF << v[i] << "\t" << elapsed_seconds.count() << std::endl;
     std::cout << "elapsed time to find and print " << v[i] << " prime numbers is: " << elapsed_seconds.count() << "seconds" << std::endl;
   }
 
@@ -37,7 +39,7 @@ int main( ){
     bruteForceM(v[i]);
     end = std::chrono::system_clock::now();
     std::chrono::duration<double> elapsed_seconds = end-start;
-    fileOut << v[i] << "\t" << elapsed_seconds.count() << std::endl;
+    fileOutbFM << v[i] << "\t" << elapsed_seconds.count() << std::endl;
     std::cout << "elapsed time to find and print " << v[i] << " prime numbers is: " << elapsed_seconds.count() << "seconds" << std::endl;
   }
 
@@ -47,7 +49,7 @@ int main( ){
     modTest(v[i]);
     end = std::chrono::system_clock::now();
     std::chrono::duration<double> elapsed_seconds = end-start;
-    fileOut << v[i] << "\t" << elapsed_seconds.count() << std::endl;
+    fileOutmT << v[i] << "\t" << elapsed_seconds.count() << std::endl;
     std::cout << "elapsed time to find and print " << v[i] << " prime numbers i\
 s: " << elapsed_seconds.count() << "seconds" << std::endl;
   }
@@ -95,7 +97,7 @@ void bruteForceM(double &n){
   }
 }    
 
-void modTestOF(int &n){
+void modTest(double &n){
   unsigned long int  num = 3, count = 1, i, j;
 
   std::vector<unsigned long int> vec;
@@ -116,7 +118,7 @@ void modTestOF(int &n){
     if (isPrime == true) {
       vec.push_back(num);
       count++;
-      fileOut << vec[count-1] << "\t";      
+      std::cout << count << "\t" << vec[count-1] <<std::endl;
     }
     num++;
   }
