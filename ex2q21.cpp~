@@ -1,0 +1,50 @@
+#include <iostream>
+#include <sstream>
+#include <stack>
+#include <vector>
+#include <string>
+void RPN (const std::string& expr);
+  
+int main(){
+  std::cout << "Enter an RPN input:" << std::endl;
+  std::string inputString;
+  std::getline(std::cin, inputString);
+  RPN(inputString);
+  return 0;
+}
+
+void RPN (const std::string& expr){
+  std::stack<double> s;  
+  std::istringstream iss(expr);
+  std::string token;
+
+  while(iss >> token) {
+    std::cout << token << std::endl;
+    double tokenNum;
+    if (std::istringstream(token) >> tokenNum){
+      double tokenNum; 
+      s.push(tokenNum);
+     }
+     else{
+       std::cout<<"operator"<<std::endl; 
+      double firstOperand = s.back();
+      s.pop();
+      double secondOperand = s.back();
+      s.pop();
+      std::cout<<firstOperand<<std::endl;
+      std::cout<<secondOperand<<std::endl;
+      if (token == "+")
+	s.push(firstOperand + secondOperand);  
+      if (token == "-")
+	s.push(firstOperand - secondOperand);
+      if (token == "*")
+	s.push(firstOperand * secondOperand);
+      if (token == "/") 
+        s.push(firstOperand / secondOperand);      
+     }
+  }
+  std::cout << "Final answer: " << s.back() << std::endl;
+}
+    
+    
+  
