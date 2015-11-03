@@ -20,32 +20,28 @@ double RPN (const std::string& expr){
   std::string token;
 
   while(iss >> token) {
-    //std::cout << token << "\t";
     double tokenNum;
     if (std::istringstream(token) >> tokenNum){
-      //std::cout << "Push\t\t";      
-      double tokenNum;
-      std::istringstream(token) >> tokenNum;
-      s.push(tokenNum);
-     }
-     else{
-       //std::cout << "Operate\t\t"; 
-      double secondOperand = s.top();
-      s.pop();
-      double firstOperand = s.top();
-      s.pop();
-      if (token == "+")
-	s.push(firstOperand + secondOperand);  
-      if (token == "-")
-	s.push(firstOperand - secondOperand);
-      if (token == "*")
-	s.push(firstOperand * secondOperand);
-      if (token == "/") 
-        s.push(firstOperand / secondOperand);      
-      if (token == "^")
-	s.push(std::pow(firstOperand, secondOperand));
-     }
-    //std::cout<<std::endl;
+        double tokenNum;
+        std::istringstream(token) >> tokenNum;
+        s.push(tokenNum);
+    }
+    else{
+        double secondOperand = s.top();
+        s.pop();
+        double firstOperand = s.top();
+        s.pop();
+        if (token == "+")
+          s.push(firstOperand + secondOperand);  
+        if (token == "-")
+          s.push(firstOperand - secondOperand);
+        if (token == "*")
+          s.push(firstOperand * secondOperand);
+        if (token == "/") 
+          s.push(firstOperand / secondOperand);      
+        if (token == "^")
+          s.push(std::pow(firstOperand, secondOperand));
+    }
   }
   return s.top();
 }

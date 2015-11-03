@@ -15,7 +15,7 @@ int main( ){
   //std::vector<double> v = {5,1000};
   //std::vector<double> v = {pow(10,3),pow(10,4)};
   std::vector<double> v = {pow(10,3),pow(10,4),pow(10,5),pow(10,6)};
-  //v.push_back(pow(10,3)); use this if compiler does not support c++11 and above
+  //std::vector v.push_back(pow(10,3)); //use this if compiler does not support c++11 and above
   
   std::ofstream fileOutbF, fileOutbFM, fileOutmT;
   fileOutbF.open("bFtimer.txt");
