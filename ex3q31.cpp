@@ -18,7 +18,7 @@ int main()
     //init sequence square vector to zero
     int nodes = lines_count(fileName);    
     std::vector<std::vector<int>> s(nodes,std::vector<int>(nodes)); 
-    //read init vector from input file
+    //init adjacency 2D vector from input file
     std::vector<std::vector<int>> d;
     input2vector(d,fileName);
     //Implement Floyd-Warshall Algorithm
