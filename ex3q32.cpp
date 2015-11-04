@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <cstdlib>
-
+    
 class City{
     int distance;
     bool visited;
@@ -22,10 +22,12 @@ public:
     int get_cCity();
 };
 
+
 int lines_count (const std::string& fileName);
 int Dijkstra(int&nodes, int& s, int& t, std::vector<City>& city, 
     std::vector<std::vector<int>>& d);
-void path_recon(int& t, std::vector<City>& city);
+void path_recon(int& s,int &t, int&nodes, std::vector<City>& city);
+void print_Cvec(std::vector<City> &vec);
 void print_vec(const std::vector<std::vector<int>>& vec);
 void input2vector (std::vector<std::vector<int>>& d, 
         const std::string& fileName);
@@ -33,19 +35,20 @@ void input2vector (std::vector<std::vector<int>>& d,
 
 int main()
 {
-    std::string fileName ="cities_3.data";
-    //init adjacency 2D vector from input file
-    int nodes = lines_count(fileName);    
+    std::string fileName ="cities_10.data";
+    int nodes = lines_count(fileName); 
     std::vector<std::vector<int>> d;
     input2vector(d,fileName);
-    //init route vectot
-    //Implement Dijkstra Algorithm
-    //print_vec(d);
-    int s = 1;
-    int t = 2;
-    //std::vector<City>& city;    
-    path_recon(t,city);
-    Dijkstra(nodes,s,t,city,d);
+    for (int i = 1; i <= nodes; i++){
+        for (int j = i+1; j <= nodes; j++){
+            int INFINITY = 123456789;
+            std::vector<City> city(nodes,City(INFINITY,false,0)); 
+            int shortest = Dijkstra(nodes,i,j,city,d);
+            path_recon(i, j, nodes, city);
+            std::cout << "\t" << shortest;
+            std::cout << std::endl;
+        }           
+    }
 }
 
 void City::set_Values(int& d, bool& v, int &p){
@@ -77,60 +80,54 @@ int City::get_cCity(){
 }
     
 int Dijkstra(int&nodes, int& s, int& t, std::vector<City>& city, 
-    std::vector<std::vector<int>>& d){
-    //Initialize
+    std::vector<std::vector<int>>& d){   
     int INFINITY = 123456789;
-    for (int j = 1; j <= nodes; j++){
-        city[j] = City(INFINITY,false,0);             
-    }
     int i_distance = 0;
-    bool i_visited = false;
-    int i_cCity = 0;
-    city[s].set_distance(i_distance);
-    city[s].set_visited(i_visited);
-    city[s].set_cCity(i_cCity);
+    bool i_visited = true;
+    int i_cCity = 1;
+    city[s-1].set_distance(i_distance);
+    city[s-1].set_visited(i_visited);
+    city[s-1].set_cCity(i_cCity);
     // Find shortest route
     int k = s;
-    while (k != t){
+    do{
         for (int j = 1; j <= nodes; j++){
-            if((city[j].get_visited() == false) && (d[k-1][j-1]!= INFINITY)){
-                if(city[j].get_distance() >= city[k].get_distance() 
+            if((city[j-1].get_visited() == false) && (d[k-1][j-1]!= INFINITY)){
+                if(city[j-1].get_distance() >= city[k-1].get_distance() 
                         + d[k-1][j-1]){
-                    int n_distance = city[k].get_distance() + d[k-1][j-1];
-                    city[j].set_distance(n_distance);
-                    city[j].set_cCity(k);
+                    int n_distance = city[k-1].get_distance() + d[k-1][j-1];
+                    city[j-1].set_distance(n_distance);
+                    city[j-1].set_cCity(k);
                 }        
             }           
         }
-        
         int min = INFINITY;
-        int k = 1;
         for (int i = 1; i <= nodes; i++){
-            if((city[i].get_visited() == false) && 
-                    (city[i].get_distance() < min)){
-                min = city[i].get_distance();
+            
+            if((city[i-1].get_visited() == false) && 
+                    (city[i-1].get_distance() < min)){
+                min = city[i-1].get_distance();
                 k = i;
             }
-            bool n_visited = true;
-            city[k].set_visited(n_visited);
-            if(k == 1){
-                return 0;
-            }
-        }        
+        }
+        bool n_visited = true;
+        city[k-1].set_visited(n_visited);
     }
-    return city[t].get_distance();    
+    while (k != t);
+    return city[t-1].get_distance();    
 }
 
-void path_recon(int& t, int&nodes, std::vector<City>& city){
+void path_recon(int& s, int& t, int& nodes, std::vector<City>& city){
     std::vector<int> path(nodes); 
     int l = 0;
-    for (int s = t; s != 1; s = city[s].get_cCity()){
-        path[l++] = s;
+    std::cout << s << " - ";
+    for (int v = t; v != s; v = city[v-1].get_cCity()){
+        path[l++] = v;
     }
     for (int i = l; i > 1; i--){
         std::cout << path[i-1] << " - ";
-        std::cout << t;
-    }        
+    }       
+    std::cout << t;
 }   
 
 int lines_count (const std::string& fileName){
@@ -143,13 +140,11 @@ int lines_count (const std::string& fileName){
     return n;
 }
 
-void print_vec(const std::vector<std::vector<int>>& vec)
+void print_Cvec(std::vector<City> &vec)
 {
-    for (int i = 0; i < vec.size(); i++){
-        for (int j = 0; j < vec[i].size(); j++){
-            std::cout << vec[i][j] << " ";
-        }
-        std::cout << std::endl;
+    for (int i = 1; i <= vec.size(); i++){
+        std::cout << vec[i-1].get_distance() << "\t" << 
+            vec[i-1].get_visited()<<"\t" << vec[i-1].get_cCity() << std::endl;
     }
 }
 
@@ -170,5 +165,15 @@ void input2vector (std::vector<std::vector<int>>& d,
         // When all the integers have been read add the 1D array
         // into a 2D array (as one line in the 2D array)
         d.push_back(lineData);
+    }
+}
+
+void print_vec(const std::vector<std::vector<int>>& vec)
+{
+    for (int i = 0; i < vec.size(); i++){
+        for (int j = 0; j < vec[i].size(); j++){
+            std::cout << vec[i][j] << " ";
+        }
+        std::cout << std::endl;
     }
 }
