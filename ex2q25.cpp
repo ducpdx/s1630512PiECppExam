@@ -3,6 +3,7 @@
 * Student number: s1630512                                            
 * Email address for correspondence: nguyenmanhduc@student.utwente.nl 
 * or ngmaduc@gmail.com
+* Shunting-yard and RPN evaluator
 *******************************************************************************/
 #include <iostream>
 #include <cmath>
@@ -12,6 +13,7 @@
 #include <vector>
 #include <string>
 #include <array>
+#include <stdexcept>
 
 enum FSM_TRANSITIONS
 {
@@ -19,17 +21,15 @@ enum FSM_TRANSITIONS
     INTEGER,
     NEGATIVE,
     OPERATOR,
-    UNKNOWN,
     SPACE
 };
 
-std::array <std::array<int, 6>, 6>stateTable = 
-{{{0, INTEGER,  NEGATIVE, OPERATOR,  UNKNOWN,  SPACE},
-  {INTEGER,  INTEGER,  RESTART,  RESTART,   RESTART,  RESTART},
-  {NEGATIVE, INTEGER,  RESTART,  RESTART,   RESTART,  RESTART},
-  {OPERATOR,  RESTART, RESTART,  RESTART,   RESTART,  RESTART},
-  {UNKNOWN,   RESTART, RESTART,  RESTART,   UNKNOWN, RESTART},
-  {SPACE,     RESTART, RESTART,  RESTART,   RESTART,  RESTART}}};
+std::array <std::array<int,5>, 5> stateTable= 
+{{{0, INTEGER,  NEGATIVE, OPERATOR, SPACE},
+  {INTEGER,  INTEGER,  RESTART,  RESTART,   RESTART},
+  {NEGATIVE, INTEGER,  RESTART,  RESTART,   RESTART},
+  {OPERATOR,  RESTART, RESTART,  RESTART,   RESTART},
+  {SPACE,     RESTART, RESTART,  RESTART,   RESTART}}};
 
 std::string infixToPostfix(std::string& infix); 
 bool isoperator(char arg);
@@ -40,36 +40,35 @@ int getFSMCol(char& currentChar);
 
 int main()
 {
-    std::string infix;
-    std::cout<<"Enter an infix infix expression:"<<std::endl;
-    std::getline(std::cin,infix);
-    std::string postfix = infixToPostfix(infix);
-    std::cout<<postfix<<std::endl;
-    std::vector<std::string> expr = parserPostFix(postfix);
-
-    //display the found tokens to the screen
-    for(unsigned x = 0; x < expr.size(); ++x)
-    {
-        std::cout<<expr.at(x)<<std::endl;
-    }       
-    std::cout<<"Output:"<<std::endl<<infix<<" = "<< RPN(expr) << std::endl;
+    try{
+        std::string infix;
+        std::cout<<"Enter an infix infix expression:"<<std::endl;
+        std::getline(std::cin,infix);
+        std::string postfix = infixToPostfix(infix);        
+        std::vector<std::string> expr = parserPostFix(postfix);      
+        std::cout << std::endl <<"Output:" << std::endl;
+        std::cout<<infix<<" = "<< RPN(expr) << std::endl;
+    }
+    catch (std::exception& e){
+        std::cout << std::endl <<"Error: " << std::endl<< e.what() << std::endl;
+    }        
 }
-
+    
 std::string infixToPostfix(std::string &infix){
+    bool expectingOperator = false;
     std::stack<char> s;//Declaring a stack for conversion purpose
     std::string postfix = "";//Initialize the output string as empty;
-    for(int i = 0;i < infix.length(); i++){//Scan the infix string one by one
-        if((std::isdigit(infix[i])) || (infix[i] == '~'))
-        {
+    for(int i = 0;i < infix.length(); i++){//Scan the infix string one by one                
+        if((std::isdigit(infix[i])) || (infix[i] == '~')){
             postfix += infix[i];
+            expectingOperator = true;    
         }
-        else if(std::isspace(infix[i]))
-        {
-            continue;
+        else if(std::isspace(infix[i])){
+                continue;
         }
-        
         else if(isoperator(infix[i]))
         {
+
             postfix+=" ";
             while((!s.empty())&&(precendence(infix[i]) <= precendence(s.top())))
             {
@@ -77,28 +76,51 @@ std::string infixToPostfix(std::string &infix){
               s.pop();
             }
             s.push(infix[i]);
+            expectingOperator = false;
         }
         else if(infix[i] == '(')
         {
+            if (expectingOperator == true){
+                throw std::runtime_error("Operator Missing");
+            }
             s.push(infix[i]);
         }
         else if(infix[i] == ')')
         {
+            if (expectingOperator == false){
+                throw std::runtime_error("Operand Missing");
+            }
             while((!s.empty()) && (s.top() != '('))
             {
 	        postfix += s.top();		
 		s.pop();
             }
-            if(!s.empty()) 
-            {
-                s.pop();
+            if(s.empty()){
+                throw std::runtime_error("Parentheses Mismatch");
             }
+            s.pop();
+            expectingOperator = true;
+        }
+        else{//no operator                        
+            throw std::runtime_error("Only integers and +,-,*,/,^ are allowed");
         }
     }
-    while(!s.empty())
-    {
-        postfix+= s.top();
-        s.pop();
+
+    if (s.size() < 1 && expectingOperator == true){//one operand given
+        throw std::runtime_error("Operator Missing");
+    }         
+    else if (expectingOperator == false){//one operator given
+        throw std::runtime_error("Operand Missing");
+    }
+    else{
+        while(!s.empty())
+        {
+            if (s.top() == '('){
+                throw std::runtime_error("Parentheses Mismatch");
+            }
+            postfix+= s.top();
+            s.pop();
+        }
     }
     return postfix;
 }
@@ -148,9 +170,11 @@ double RPN (const std::vector<std::string>& expr){
         }
         else if(isoperator(expr[i][0]) && (!s.empty()))
         {
-            char token = expr[i][0];
-            if(s.size() > 1)
-            {
+            if (s.size() < 2){
+                throw std::runtime_error("Not enough operands"); 
+            }
+            else{
+                char token = expr[i][0];
                 double secondOperand = s.top();
                 s.pop();
                 double firstOperand = s.top();
@@ -166,6 +190,10 @@ double RPN (const std::vector<std::string>& expr){
                         ans = firstOperand * secondOperand;
                         break;
                     case ('/'):
+                        if (secondOperand == 0){
+                            throw std::runtime_error
+                                ("Attempt to divide by zero.");
+                        }
                         ans = firstOperand / secondOperand;
                         break;
                     case ('^'):
@@ -173,10 +201,13 @@ double RPN (const std::vector<std::string>& expr){
                         break;
                 }
                 s.push(ans);
-            }    
+            }
         }
     }
-    // pop the final answer from the stack, and return to main
+    
+    if (s.size() != 1){
+        throw std::runtime_error("Invalid Input");
+    }
     if(!s.empty())
     {
         answer = s.top();
@@ -202,10 +233,9 @@ int getFSMCol(char& currentChar)
     else if(isoperator(currentChar))
     {
         return OPERATOR;
-    }
-    return UNKNOWN;
+    }    
 }
-//parser and error checking
+
 std::vector<std::string> parserPostFix(std::string& postfix)
 {// this function parses a postfix string using an FSM to generate
  //  each individual token in the infix expression
@@ -223,7 +253,7 @@ std::vector<std::string> parserPostFix(std::string& postfix)
         {
             if(currentToken != " ")
             {
-                tokens.push_back(currentToken);
+                tokens.push_back(currentToken);//push to new cell
             }
             currentToken = "";
         }
