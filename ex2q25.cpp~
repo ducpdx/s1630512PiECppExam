@@ -1,0 +1,126 @@
+#include <iostream>
+#include <cmath>
+#include <sstream>
+#include <stack>
+#include <vector>
+#include <string>
+
+std::string infixToPostfix(std::string& expr); 
+bool isoperand(char& arg);
+bool isoperator(char& arg);
+int precendence(char& arg);
+double RPN (std::string& expr);
+
+int main()
+{
+    std::string exp;//Variable to get input expression
+    std::cout<<"Enter an infix expression:"<<std::endl;
+    std::getline(std::cin,exp);
+    std::string expr = infixToPostfix(exp);
+    std::cout<<expr<<std::endl;
+    std::cout<<"Output:"<<std::endl<<exp<<" = "<< RPN(expr);
+}
+
+std::string infixToPostfix(std::string &expr)//Function to perform all conversion operation
+{
+
+    std::stack<char> s;//Declaring a stack for conversion purpose
+    std::string postfix = "";//Initialize the output string as empty;
+    for(int i = 0;i < expr.length(); i++)//Scan the infix string one by one
+        if(expr[i] == '(')
+        {
+            s.push(expr[i]);
+        }
+        else if(expr[i] == ')')
+        {
+            while(s.top() != '(')
+            {
+                postfix += s.top();
+                s.pop();
+            }
+            s.pop();
+        }
+        else if(isoperand(expr[i]))
+        {
+            postfix += " ";
+            postfix += expr[i];
+        }
+        else if(isoperator(expr[i]))
+        {
+            while(!s.empty()&& precendence(expr[i]) < precendence(s.top()))
+            {
+                postfix+= s.top();
+                s.pop();
+            }
+            s.push(expr[i]);
+        }
+    while(!s.empty())
+    {
+        postfix+= s.top();
+        s.pop();
+    }
+    return postfix;
+}
+
+bool isoperator(char& arg)
+{
+    if(arg == '*' || arg == '/' || arg == '+' || arg == '-' || arg == '^') return(1);
+    else return(0);
+}
+bool isoperand(char& arg)//Check weather the character is operand
+{
+    if(arg >= '0' && arg <= '9') return 1;
+    return 0;
+}
+
+int precendence(char& arg)//Add weight to the operator
+{
+    int weight = 0;
+    switch(arg)
+    {
+    case '^':
+        weight = 3;
+        break;
+    case '*':
+    case '/':
+        weight = 2;
+        break;
+    case '+':
+    case '-':
+        weight = 1;
+        break;
+    }
+    return(weight);
+}
+
+double RPN (std::string& expr){
+  std::stack<double> s;  
+  std::istringstream iss(expr);
+  std::string token;
+
+  while(iss >> token) {
+    double tokenNum;
+    if (std::istringstream(token) >> tokenNum){
+        double tokenNum;
+        std::istringstream(token) >> tokenNum;
+        s.push(tokenNum);
+    }
+    else{
+        double secondOperand = s.top();
+        s.pop();
+        double firstOperand = s.top();
+        s.pop();
+        if (token == "+")
+          s.push(firstOperand + secondOperand);  
+        if (token == "-")
+          s.push(firstOperand - secondOperand);
+        if (token == "*")
+          s.push(firstOperand * secondOperand);
+        if (token == "/") 
+          s.push(firstOperand / secondOperand);      
+        if (token == "^")
+          s.push(std::pow(firstOperand, secondOperand));
+    }
+  }
+  return s.top();
+}

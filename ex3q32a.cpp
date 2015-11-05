@@ -4,7 +4,7 @@
 * Email address for correspondence: nguyenmanhduc@student.utwente.nl 
 * or ngmaduc@gmail.com
 *******************************************************************************/
-#include <iostream>
+include <iostream>
 #include <vector>
 #include <string>
 #include <fstream>
@@ -28,7 +28,6 @@ public:
     int get_cCity();
 };
 
-
 int lines_count (const std::string& fileName);
 void input2vector (std::vector<std::vector<int>>& d, 
         const std::string& fileName);
@@ -38,7 +37,7 @@ void path_recon(int& s,int &t, int&nodes, std::vector<City>& city);
 
 int main()
 {
-    std::string fileName ="cities_3.data";
+    std::string fileName ="cities_10.data";
     int nodes = lines_count(fileName); 
     std::vector<std::vector<int>> d;
     input2vector(d,fileName);

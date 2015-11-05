@@ -11,6 +11,7 @@
 #include <sstream>
 
 int lines_count (const std::string& fileName);
+void print_vec(const std::vector<std::vector<int>>& vec);
 void input2vector (std::vector<std::vector<int>>& d, 
         const std::string& fileName);
 void WFI(int &nodes, std::vector<std::vector<int>>& d, 
@@ -22,7 +23,7 @@ int main()
     std::string fileName ="cities_3.data";
     //init sequence square vector to zero
     int nodes = lines_count(fileName);    
-    std::vector<std::vector<int>> s(nodes,std::vector<int>(nodes, 0)); 
+    std::vector<std::vector<int>> s(nodes,std::vector<int>(nodes)); 
     //init adjacency 2D vector from input file
     std::vector<std::vector<int>> d;
     input2vector(d,fileName);
@@ -47,6 +48,16 @@ int lines_count (const std::string& fileName){
         n++;
     }
     return n;
+}
+
+void print_vec(const std::vector<std::vector<int>>& vec)
+{
+    for (int i = 0; i < vec.size(); i++){
+        for (int j = 0; j < vec[i].size(); j++){
+            std::cout << vec[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
 }
 
 void input2vector (std::vector<std::vector<int>>& d, 
