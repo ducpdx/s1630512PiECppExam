@@ -19,17 +19,18 @@ int main( ){
     //std::array<double,4> a = {100,1000,10000,
     //20000};
     for (int i = 0; i < a.size(); i++){
-        unsigned long int max = a[i] * std::log(a[i]*std::log(a[i])); //for n geq 6 Rosser's theorem  
+        //for n geq 6 Rosser's theorem  
+        unsigned long int max = a[i] * std::log(a[i]*std::log(a[i])); 
         std::vector<unsigned long int> primes = Eratosthenes(a[i],max);
         print_primes(a[i], primes);        
     }  
 }
 
-std::vector<unsigned long int> Eratosthenes(double& n , unsigned long int &max){
+std::vector<unsigned long int> Eratosthenes(double& n,unsigned long int &max){
     std::vector<bool> isPrime(max, true);
     std::vector<unsigned long int> primes; 
     for (unsigned long int p=2; p < max; p++){ // for all elements in array
-        if (primes.size() > n){//keep track first n prime only
+        if (primes.size() > n-1){//keep track first n prime only, vector count from 0
             break;
         }
         else if(isPrime[p] == true){ // it is not multiple of any other prime

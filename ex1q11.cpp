@@ -2,81 +2,80 @@
 #include<math.h>
 #include<vector>
 
-void bruteForce(int &n);
-std::vector<unsigned long int> modTestd(int &n);
-void print_vec(int &n, const std::vector<unsigned long int>& vec);
+std::vector <unsigned long int> bruteForce (int &n);
+std::vector <unsigned long int> modTestDiv (int &n);
+void print_primes (int &n, const std::vector <unsigned long int>& primes);
 
 int main( ){
-  int n;
-  std::cout << "How many prime numbers (from the first one) are required?" << std::endl;
-  std::cin >> n;
-  bruteForce(n);
-  print_vec(n,modTestd(n));
-  return 0; 
+    int n;
+    std::cout << "How many prime numbers (from the first one) are required?"; 
+    std::cout<< std::endl;
+    std::cin >> n;
+    std::vector<unsigned long int> primes = bruteForce(n);
+    //std::vector<unsigned long int> primes = modTestDiv(n);
+    print_primes(n,primes);
+    return 0; 
 }
 
-void print_vec(int &n, const std::vector<unsigned long int>& vec)
+void print_primes(int &n, const std::vector<unsigned long int>& primes)
 {
-  int i;
-  std::cout << "First " << n << " prime number are:" << std::endl;
-  for (i = 0; i <= vec.size()-1; i++) {
-    std::cout << vec[i] <<std::endl;
-  }
+    if(n >= 1){
+        std::cout << "First " << n << " prime number(s) is(are):" << std::endl;
+        for (int i = 0; i < primes.size(); i++) {
+          std::cout << primes[i] <<std::endl;
+        }
+    }
+    else{
+        std::cerr << "Invalid Input" << std::endl;
+    }
 }
 
-void bruteForce(int &n){
-  unsigned long int  num = 3, count = 1, c;
-  
-  if (n >= 1) {
-    std::cout << "First " << n << " prime number are:" << std::endl;
-    std::cout << "2" << std::endl;
-  }
-
-  for (count = 2; count <= n; ) {
-    for (c = 2; c <= num-1; c++) {
-      if (num%c == 0) {
-	break;	
-      }    
+std::vector<unsigned long int> bruteForce(int &n){
+    unsigned long int  num = 3;  
+    std::vector<unsigned long int> primes;
+    if (n >= 1){
+        primes.push_back(2);
+        unsigned long int c;//need to be the type of primes for mode test
+        int count = 1;
+        for (int count = 1; count < n; ){//counter from 1; "2" included before
+            for (c = 2; c < num; c++){
+                if (num % c == 0) {//mod test from 2 to n
+                    break;	
+                }    
+            }
+            if (c == num) {//to this point means no divisor up to n, Prime!
+                primes.push_back(num);//push to result vector of Prime
+                count++;//increase counter   
+            }
+            num++;  
+        }
     }
-    if (c == num) {
-      std::cout << num <<std::endl;
-      count++;   
-    }
-    num++;  
-  }
+    return primes;
 }  
   
-std::vector<unsigned long int> modTestd(int &n){
-  unsigned long int  num = 3, count = 1, i, j;
-   
-  std::vector<unsigned long int> vec;
-  vec.push_back(2);
-  std::cout << "Size of vector is: " << vec.size() <<std::endl  << "Prime numbers in the vector are:" << std::endl;
-  for (j = 0; j <= vec.size()-1; j++) {
-    std::cout << vec[j] <<std::endl;
-  }
-  
-  for (count = 1; count < n; ) {
-    bool isPrime = true;
-    for (i = 0; i <= vec.size()-1; i++) {
-      if (num%vec[i] ==0) {
-	isPrime = false;
-	break;
-      }    
+std::vector<unsigned long int> modTestDiv(int &n){
+    unsigned long int  num = 3;   
+    std::vector<unsigned long int> primes;//result vector of Primes
+    if (n >= 1){
+        primes.push_back(2);  
+        for (int count = 1; count < n; ) {//counter from 1; "2" included before 
+            bool isPrime = true;
+            for (int i = 0; i < primes.size(); i++){
+                if (num % primes[i] ==0) {//non-primes  are products of primes
+                  isPrime = false;
+                  break;
+                }    
+            }
+            if (isPrime == true) {
+                primes.push_back(num);
+                count++;//increase counter
+            }
+            num++;
+        }
     }
-
-    if (isPrime == true) {
-      vec.push_back(num);
-      count++;
-      std::cout << "Size of vector is: " << vec.size() <<std::endl  << "Prime numbers in the vector are:" << std::endl;
-      for (j = 0; j <= vec.size()-1; j++) {
-	std::cout << vec[j] <<std::endl;
-      }
-    }
-    num++;
-  }
-  return vec;
+    return primes;
 }
+
 
 
 

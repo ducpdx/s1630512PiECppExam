@@ -1,0 +1,244 @@
+\documentclass[a4paper,12pt]{article}%twoside
+\usepackage{amsfonts, amsmath, amssymb, bm, color, fancyhdr, graphicx, lastpage, listings, natbib, relsize, titling}
+\usepackage{hyperref}
+\hypersetup{pdftex,colorlinks=true,allcolors=blue}
+\usepackage{hypcap}
+\usepackage[left=2.5cm,right=2cm]{geometry}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\usepackage{caption}
+\DeclareCaptionFont{black}{\color{black}}
+\DeclareCaptionFormat{listing}{\colorbox{\color{listinggray}}{\parbox{0.988\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{
+backgroundcolor=\color{lbcolor},
+    tabsize=4,    
+%   rulecolor=,
+    language=[GNU]C++,
+        basicstyle=\scriptsize,
+        breakatwhitespace,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=false,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        numbers=left,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.026,0.112,0.095},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+        numberstyle=\color[rgb]{0.205, 0.142, 0.73},
+%      \lstdefinestyle{C++}{language=C++,style=numbers}’.
+}
+\lstset{
+  backgroundcolor=\color{lbcolor},
+  breaklines=true,
+  %literate={\_}{}{0\discretionary{\_}{}{\_}}%
+  tabsize=4,
+  language=C++,
+  captionpos=t,
+  tabsize=3,
+  frame=lines,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  showstringspaces=false,
+  basicstyle=\footnotesize,
+%  identifierstyle=\color{magenta},
+  keywordstyle=\color[rgb]{0,0,1},
+  commentstyle=\color[rgb]{0,0.6,0},
+  stringstyle=\color{red}
+  }
+ 
+\newcommand\CC{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\relsize{-3}{\textbf{++}}}}
+
+%\fancyhead[LE,RO]{\thepage}
+\pagestyle{fancy}
+%\fancyhead{}% Remove all header contents
+\textheight 24cm
+\voffset -0.25cm
+\footskip 3.5cm
+\setlength{\parindent}{0pt}
+
+\makeatletter
+%\renewcommand{\headrulewidth}{0pt}% Remove header rule
+\renewcommand{\thefootnote}{\roman{footnote}}	
+
+\renewcommand\section{\@startsection{section}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\large\bfseries}}% from \large
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\bfseries\itshape}}% from \large                                                                        
+
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+%\newcommand\prefix@section{Section \thesection: }
+\newcommand\prefix@section{}
+
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+%\newcommand\prefix@section{Section \thesection: }
+\newcommand\prefix@subsection{}
+
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+%\newcommand\prefix@section{Section \thesection: }
+\newcommand\prefix@subsubsection{}
+
+\renewcommand{\baselinestretch}{1.15} 
+
+\pretitle{\noindent\Large\bfseries}
+\posttitle{\\}
+\preauthor{\itshape}
+\postauthor{\\}
+\pretitle{\begin{center}\Large\bfseries}
+\posttitle{\end{center}\\}
+\preauthor{\begin{center}\normalsize}
+\postauthor{\end{center}\\}
+\predate{\begin{center}\itshape}
+\postdate{\end{center}\\}
+\setlength{\droptitle}{-1.25 in}
+\lhead{PiE $\CC$ Final Assignment}
+\rhead{Duc Nguyen \quad \thepage\ / \pageref{LastPage}}
+\title{PiE $\CC$ Final Assignment}
+%\date{\vspace{-5ex}}
+\author{Name: Duc Nguyen, \\student number: s1630512\thanks{Email address for 
+correspondence: nguyenmanhduc@student.utwente.nl or ngmaduc@gmail.com}}
+
+\begin{document}
+\clearpage\maketitle
+\thispagestyle{empty}
+\pagestyle{fancy}
+\newpage
+%\maketitle
+\section{Exercise 1}
+\subsection{Question 1.1}
+Write a $\CC$ program to compute the first N prime numbers, where N is given by the user. Use dynamic arrays to store the primes and use this information in the mod test. 
+\subsubsection{Answer.}
+Three functions are used for this question including $\lstinline{bruteForce, modTest}$ and 
+$\lstinline{print_primes}$ for finding prime numbers and printing out the result in console. Passing by reference are chosen to avoid unnecessary copy of variables.
+\begin{lstlisting}
+std::vector <unsigned long int> bruteForce (int &n);
+std::vector <unsigned long int> modTest (int &n);
+void print_primes (int &n, const std::vector <unsigned long int>& primes);
+\end{lstlisting}
+The method chosen to create dynamic arrays to store the primes is $\lstinline{std::vector}$. The range $[0, 2147483647]$ of  $\lstinline{unsigned long int}$ fits to the scope of the question. The idea of $\lstinline{bruteForce, modTestDiv}$ are shown in the following code snippets.
+\begin{lstlisting}[title = $\lstinline{bruteForce}$]
+       primes.push_back(2);
+        unsigned long int c;//need to be the type of primes for mode test
+        int count = 1;
+        for (int count = 1; count < n; ){//counter from 1; "2" included before
+            for (c = 2; c < num; c++){
+                if (num % c == 0) {//mod test from 2 to n
+                    break;	
+                }    
+            }
+            if (c == num) {//to this point means no divisor up to n, Prime!
+                primes.push_back(num);//push to result vector of Prime
+                count++;//increase counter   
+            }
+            num++;  
+        }
+\end{lstlisting}
+
+\begin{lstlisting}[title = $\lstinline{modTestDiv}$]
+        primes.push_back(2);  
+        for (int count = 1; count < n; ) {//counter from 1; "2" included before 
+            bool isPrime = true;
+            for (int i = 0; i < primes.size(); i++){
+                if (num % primes[i] ==0) {//non-primes  are products of primes
+                  isPrime = false;
+                  break;
+                }    
+            }
+            if (isPrime == true) {
+                primes.push_back(num);
+                count++;//increase counter
+            }
+            num++;
+        }
+\end{lstlisting}
+\subsection{Question 1.2}
+Write to the screen a list of the first 10000 primes in the format below; where $p(n)$ is the
+$n^{th}$ prime number. Report only the last five lines. Comment on the behaviour of the ratio $n * ln(p(n))/p(n)$ as n gets large.
+\subsubsection{Answer.}
+The $\lstinline{void print_ratio (int &n, const std::vector <unsigned long int>& primes)}$ and  prime number finding functions together generate the required ratio. As $n$ gets large, the ratio tends to converge to 1. Until $10^5-th$ prime number, the ratio is 1.103.\\\\
+The last five lines are and the $\lstinline{print_ratio}$ are listed below:
+\begin{lstlisting}
+9996     :       104707  :       1.10348856177824
+9997     :       104711  :       1.10356044403989
+9998     :       104717  :       1.10361306655082
+9999     :       104723  :       1.10366568381267
+10000    :       104729  :       1.10371829582629
+\end{lstlisting}
+
+\begin{lstlisting}[title = $\lstinline{print_ratio}$]
+void print_ratio (int &n, const std::vector <unsigned long int>& primes){
+    std::cout << "n\t:\t p(n)\t:\t n*ln( p(n) )/p(n) " << std::endl;
+    for (int i = primes.size; i < primes.size(); i++) {
+        std::cout << i+1 << "\t:\t" << primes[i] <<"\t:\t" 
+            <<std::fixed << std::setprecision(14) << 
+                double((i+1)*log(primes[i])/primes[i])<< std::endl;
+        }//set precision used for increase decimal displayed
+}
+\end{lstlisting}
+\subsection{Question 1.3}
+Based on question 2, give an estimate of the $10^6-th$ prime number.
+\subsubsection{Answer.}
+We use 1.1 for the value of the ratio with $n=10^6$:
+$$10^6 * ln(p(10^6))/p(10^6) \approx 1.1 $$
+Using Wolfram Alpha to solve this equation, the estimate of the $10^6-th$ prime number is:
+$$p(10^6) \approx 15022800$$
+\subsection{Question 1.4}
+Instead of writing to the screen, write to a file (on disk) a list containing just the prime
+numbers. Print eight numbers per line, such that all numbers have the same space.
+\subsubsection{Answer.}
+
+\section{Question 2}
+Use symbolic dierentiation from the matlab symbolic toolbox to derive the magnitude of
+the force as a function of $r_{ij}$ .\\\\
+\textit{ANSWER}
+\section{Question 3}
+Plot the force fij as a function of the distance $r_{ij}$.\\\\
+\textit{ANSWER}
+\section{Question 4}
+Write two matlab functions that solve the differential equations, for a 1D system of particles, using Euler Forward algorithm and the Verlet algorithm. Comment on which algorithm you prefer and state why?\\\\
+\textit{ANSWER}
+\section{Question 5}
+Plot the potential $V_{ij}$ as a function of the distance rij . Plot separately both the attractive and repulsive contribution.\\\\
+\textit{ANSWER}
+\section{Question 6}
+Plot the potential $V_{ij}$ as a function of the distance rij . Plot separately both the attractive and repulsive contribution.\\\\
+\textit{ANSWER}
+
+\end{document}
+     
