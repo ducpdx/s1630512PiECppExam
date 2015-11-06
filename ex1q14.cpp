@@ -10,7 +10,7 @@ int main( ){
   int n;
   std::cout << "How many prime numbers (consecutively from the first one) are required?" << std::endl;
   std::cin >> n;
-  //bruteForcef(n);
+  //bruteForceOF(n);
   modTestOF(n);
   return 0; 
 }
@@ -23,13 +23,13 @@ void bruteForceOF(int &n){
     std::cout << "2" << std::endl;
   }
 
-  for (count = 2; count <= n; ) {
-    for (c = 2; c <= num-1; c++) {
+  for (int count = 2; count <= n; ) {
+    for (int c = 2; c <= num-1; c++) {
       if (num%c == 0) {
 	break;	
       }    
     }
-    if (c == num) {
+    if (int c == num) {
       std::cout << num <<std::endl;
       count++;   
     }
