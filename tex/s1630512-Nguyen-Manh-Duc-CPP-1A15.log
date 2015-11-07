@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  7 NOV 2015 00:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  7 NOV 2015 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -957,7 +957,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.154 ...of the question. The idea of $\lstinline{
-                                                  bruteForce, modTestDiv}$ a...
+                                                  bruteForce}$,\linebreak $\...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -973,7 +973,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.154 ...of the question. The idea of $\lstinline{
-                                                  bruteForce, modTestDiv}$ a...
+                                                  bruteForce}$,\linebreak $\...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -992,10 +992,78 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.154 ...tion. The idea of $\lstinline{bruteForce,
-                                                   modTestDiv}$ are shown in...
+l.154 ...tion. The idea of $\lstinline{bruteForce}
+                                                  $,\linebreak $\lstinline{m...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154 ...tion. The idea of $\lstinline{bruteForce}
+                                                  $,\linebreak $\lstinline{m...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154 ...tion. The idea of $\lstinline{bruteForce}
+                                                  $,\linebreak $\lstinline{m...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154 ...line{bruteForce}$,\linebreak $\lstinline{
+                                                  modTestDiv}$ are shown in ...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154 ...line{bruteForce}$,\linebreak $\lstinline{
+                                                  modTestDiv}$ are shown in ...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 15
+4.
 
 
 ! LaTeX Error: Command \ttfamily invalid in math mode.
@@ -1004,7 +1072,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.154 ...ea of $\lstinline{bruteForce, modTestDiv}
+l.154 ...orce}$,\linebreak $\lstinline{modTestDiv}
                                                   $ are shown in the followi...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
@@ -1016,7 +1084,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.154 ...ea of $\lstinline{bruteForce, modTestDiv}
+l.154 ...orce}$,\linebreak $\lstinline{modTestDiv}
                                                   $ are shown in the followi...
 
 If you do not understand this error, please take a closer look
@@ -1032,7 +1100,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.154 ...ea of $\lstinline{bruteForce, modTestDiv}
+l.154 ...orce}$,\linebreak $\lstinline{modTestDiv}
                                                   $ are shown in the followi...
 
 If you do not understand this error, please take a closer look
@@ -1040,12 +1108,6 @@ at the documentation of the `caption' package, especially the
 section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (32.9035pt too wide) in paragraph at lines 154--155
-\OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2147483647]$ of $[]$ fits 
-to the scope of the ques-tion. The idea of $[]$
- []
 
 
 ! Package caption Error: white undefined.
@@ -1822,7 +1884,7 @@ Here is how much of TeX's memory you used:
  12728 multiletter control sequences out of 15000+600000
  19455 words of font info for 72 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 40i,15n,67p,353b,1086s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,15n,67p,377b,1086s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 0.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/
@@ -1840,7 +1902,7 @@ t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015basic
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015b
 asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on s1630512-Nguyen-Manh-Duc-CPP-1A15.pdf (5 pages, 171874 bytes)
+Output written on s1630512-Nguyen-Manh-Duc-CPP-1A15.pdf (5 pages, 171893 bytes)
 .
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)

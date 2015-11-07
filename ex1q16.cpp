@@ -7,26 +7,31 @@
 *******************************************************************************/
 #include<iostream>
 #include<cmath>
-#include<array>
 #include<vector>
+#include<fstream>
+#include<chrono>//measure time
+#include<iomanip>//fix precision
+#include<array>
+#include <functional>
 
-std::vector<unsigned long int> Eratosthenes(double& n , unsigned long int &max);
+
+std::vector<unsigned long int> Eratosthenes(double& n);
 void print_primes(double& n, const std::vector<unsigned long int>& primes);
+void rtime_to_file (const std::string& fileName, 
+    std::function<std::vector <unsigned long int>(double &n)> &function);
 
 int main( ){
-    std::array<double,4> a = {std::pow(10,3),std::pow(10,4),
-        std::pow(10,5),std::pow(10,6)};
-    //std::array<double,4> a = {100,1000,10000,
-    //20000};
-    for (int i = 0; i < a.size(); i++){
-        //for n geq 6 Rosser's theorem  
-        unsigned long int max = a[i] * std::log(a[i]*std::log(a[i])); 
-        std::vector<unsigned long int> primes = Eratosthenes(a[i],max);
-        print_primes(a[i], primes);        
-    }  
+    std::array<std::string,1> fileName = 
+        {"Eratosthenes.txt"};   
+    std::array<std::function<std::vector <unsigned long int>(double &n)>,1>
+        function = {Eratosthenes};
+    for (int i = 0; i < fileName.size(); i++) {
+        rtime_to_file(fileName[i], function[i]);
+        }         
 }
 
-std::vector<unsigned long int> Eratosthenes(double& n,unsigned long int &max){
+std::vector<unsigned long int> Eratosthenes(double& n){
+    unsigned long int max = n * std::log(n*std::log(n)); 
     std::vector<bool> isPrime(max, true);
     std::vector<unsigned long int> primes; 
     for (unsigned long int p=2; p < max; p++){ // for all elements in array
@@ -53,5 +58,28 @@ void print_primes(double& n, const std::vector<unsigned long int>& primes)
     std::cout << "First " << n << " prime number are:" << std::endl;
     for (int i = 0; i < primes.size(); i++){
             std::cout << primes[i]<< std::endl;
+    }
+}
+
+void rtime_to_file (const std::string& fileName, 
+    std::function<std::vector <unsigned long int>(double &n)> &f){    
+    std::ofstream fileOut;
+    fileOut.open(fileName);
+    fileOut << "%column 1: no of prime numbers" << std::endl;
+    fileOut << "%column 2: run time (in second)"<<std::endl;
+    std::array<double,4> v = {std::pow(10,3),std::pow(10,4),
+          std::pow(10,5),std::pow(10,7)};
+    //std::array<double,4> v = {100,1000,10000,20000};
+    for (int i = 0; i < v.size(); i++) {
+        std::chrono::time_point<std::chrono::system_clock> start, end;
+        start = std::chrono::system_clock::now();
+        std::vector<unsigned long int> primes = f(v[i]);
+        //print_primes(v[i],primes);
+        end = std::chrono::system_clock::now();
+        std::chrono::duration<double> elapsed_seconds = end-start;
+        fileOut << std::fixed << std::setprecision(0)<< v[i] << "\t";
+        fileOut << std::fixed << std::setprecision(14)<<elapsed_seconds.count(); 
+        fileOut << std::endl;
+        std::cout << "elapsed time to find and print " <<std::fixed << std::setprecision(0) << v[i] << " prime numbers is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
     }
 }

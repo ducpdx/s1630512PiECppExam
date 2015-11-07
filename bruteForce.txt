@@ -1,0 +1,4 @@
+%column 1: no of prime numbers
+%column 2: run time (in second)
+1000	0.06098800000000
+10000	6.31708600000000

@@ -2,128 +2,130 @@
 #include<cmath>
 #include<vector>
 #include<fstream>
-#include<chrono>
-#include<iomanip>
+#include<chrono>//measure time
+#include<iomanip>//fix precision
+#include<array>
+#include <functional>
 
-
-void bruteForce(double &n);
-void bruteForceM(double &n);
-void modTest(double &n);
+std::vector <unsigned long int> bruteForce (double &n);
+std::vector <unsigned long int> modTestDiv (double &n);
+std::vector <unsigned long int> bruteForceM (double &n);
+void print_primes (double &n, std::vector <unsigned long int>& primes);
+void rtime_to_file (const std::string& fileName, 
+    std::function<std::vector <unsigned long int>(double &n)> &function);
 
 int main( ){
-  int i;
-  //std::vector<double> v = {5,1000};
-  //std::vector<double> v = {pow(10,3),pow(10,4)};
-  std::vector<double> v = {pow(10,3),pow(10,4),pow(10,5),pow(10,6)};
-  //std::vector v.push_back(pow(10,3)); //use this if compiler does not support c++11 and above
-  
-  std::ofstream fileOutbF, fileOutbFM, fileOutmT;
-  fileOutbF.open("bFtimer.txt");
-  //fileOutbFM.open("bFMtimer.txt");
-  //fileOutmT.open("mTtimer.txt");
-  fileOutbF << "%column 1: no of prime numbers" << std::endl << "%column 2: run time (in second)"<<std::endl;
-  //fileOutbFM << "%column 1: no of prime numbers" << std::endl << "%column 2: run time (in second)"<<std::endl;
-  //fileOutmT << "%column 1: no of prime numbers" << std::endl << "%column 2: run time (in second)"<<std::endl;
-  
-  for (i = 0; i < v.size(); i++) {
-    std::chrono::time_point<std::chrono::system_clock> start, end;
-    start = std::chrono::system_clock::now();
-    bruteForce(v[i]);
-    end = std::chrono::system_clock::now();
-    std::chrono::duration<double> elapsed_seconds = end-start;
-    fileOutbF <<std::fixed << std::setprecision(0)<< v[i] << "\t" << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << std::endl;
-    std::cout << "elapsed time to find and print " <<std::fixed << std::setprecision(0) << v[i] << " prime numbers is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
-  }
-  /*
-  for (i = 0; i < v.size(); i++) {
-    std::chrono::time_point<std::chrono::system_clock> start, end;
-    start = std::chrono::system_clock::now();
-    bruteForceM(v[i]);
-    end = std::chrono::system_clock::now();
-    std::chrono::duration<double> elapsed_seconds = end-start;
-    fileOutbFM <<std::fixed << std::setprecision(0)<< v[i] << "\t" << std::fixed << std::setprecision(14)<< elapsed_seconds.count() << std::endl;
-    std::cout << "elapsed time to find and print " <<std::fixed << std::setprecision(0)<< v[i] << " prime numbers is: " <<std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
-  }
-
-  for (i = 0; i < v.size(); i++) {
-    std::chrono::time_point<std::chrono::system_clock> start, end;
-    start = std::chrono::system_clock::now();
-    modTest(v[i]);
-    end = std::chrono::system_clock::now();
-    std::chrono::duration<double> elapsed_seconds = end-start;
-    fileOutmT <<std::fixed << std::setprecision(0)<< v[i] << "\t" << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << std::endl;
-    std::cout << "elapsed time to find and print " <<std::fixed << std::setprecision(0)<< v[i] << " prime numbers is: " <<std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
-  }
-  */
-  return 0; 
+    std::array<std::string,3> fileName = 
+        {"bruteForce.txt", "modTestDiv.txt", "bruteForceM.txt"};   
+    std::array<std::function<std::vector <unsigned long int>(double &n)>,3>
+        function = {bruteForce, modTestDiv,bruteForceM};
+    for (int i = 0; i < fileName.size()-2; i++) {
+        rtime_to_file(fileName[i], function[i]);
+        }
+    return 0; 
 }
 
-void bruteForce(double &n){
-  unsigned long int  num = 3, count = 1, c;
-  
-  std::cout << "First " << n << " prime number are:" << std::endl;
-  std::cout << count << "\t" << "2" << std::endl;
+std::vector<unsigned long int> bruteForce(double &n){
+    unsigned long int  num = 3;  
+    std::vector<unsigned long int> primes;
+    if (n >= 1){
+        primes.push_back(2);
+        unsigned long int c;//need to be the type of primes for mode test
+        for (int count = 1; count < n; ){//counter from 1; "2" included before
+            for (c = 2; c < num; c++){
+                if (num % c == 0) {//mod test from 2 to n
+                    break;	
+                }    
+            }
+            if (c == num) {//to this point means no divisor up to n, Prime!
+                primes.push_back(num);//push to result vector of Prime
+                count++;//increase counter   
+            }
+            num++;  
+        }
+    }
+    return primes;
+}  
 
-  for (count = 2; count <= n; ) {
-    for (c = 2; c <= num-1; c++) {
-      if (num%c == 0) {
-	break;	
-      }    
+std::vector <unsigned long int> bruteForceM (double &n){
+    unsigned long int  num = 3;  
+    std::vector<unsigned long int> primes;
+    if (n >= 1){
+        primes.push_back(2);
+        unsigned long int c;//need to be the type of primes for mode test
+        for (int count = 2; count <= n; ){//counter from 1; "2" included before
+            for (c = 2; c <= sqrt(num); c++){//non prime has divisor lt sqrt
+                if (num % c == 0) {//mod test from 2 to n
+                    break;	
+                }    
+            }
+            if (c > sqrt(num)) {//to this point means no divisor up to n, Prime!
+                primes.push_back(num);//push to result vector of Prime
+                count++;//increase counter   
+            }
+            num++;  
+        }
     }
-    if (c == num) {
-      std::cout << count << "\t" << num <<std::endl;
-      count++;   
-    }
-    num++;  
-  }
+    return primes;
 }    
 
-
-void bruteForceM(double &n){
-  unsigned long int  num = 3, count = 1, c;
-
-  std::cout << "First " << n << " prime number are:" << std::endl;
-  std::cout << count << "\t" << "2" << std::endl;  
-
-  for (count = 2; count <= n; ) {
-    for (c = 2; c <= sqrt(num); c++) {
-      if (num%c == 0) {
-	break;	
-      }    
+std::vector<unsigned long int> modTestDiv(double &n){
+    unsigned long int  num = 3;   
+    std::vector<unsigned long int> primes;//result vector of Primes
+    if (n >= 1){
+        primes.push_back(2);  
+        for (int count = 1; count < n; ) {//counter from 1; "2" included before 
+            bool isPrime = true;
+            for (int i = 0; i < primes.size(); i++){
+                if (num % primes[i] ==0) {//non-primes  are products of primes
+                  isPrime = false;
+                  break;
+                }    
+            }
+            if (isPrime == true) {
+                primes.push_back(num);
+                count++;//increase counter
+            }
+            num++;
+        }
     }
-    if (c > sqrt(num)) {
-      std::cout << count << "\t" << num <<std::endl;
-      count++;   
+    return primes;
+}
+
+void print_primes (double &n, std::vector <unsigned long int>& primes){
+    //print after finding finished, not on-the-fly
+    if(n >= 1){
+        std::cout << "First " << n << " prime number(s) is(are):" << std::endl;
+        for (int i = 0; i < primes.size(); i++) {
+          std::cout << primes[i] <<std::endl;
+        }
     }
-    num++;  
-  }
-}    
-
-void modTest(double &n){
-  unsigned long int  num = 3, count = 1, i, j;
-
-  std::vector<unsigned long int> vec;
-  vec.push_back(2);
-
-  std::cout << "First " << n << " prime number are:" << std::endl;
-  std::cout << count << "\t" << "2" << std::endl;
-
-  for (count = 1; count < n; ) {
-    bool isPrime = true;
-    for (i = 0; i <= vec.size()-1; i++) {
-      if (num % vec[i] == 0) {
-	isPrime = false;
-	break;
-      }
+    else{
+        std::cerr << "Invalid Input" << std::endl;
     }
+}
 
-    if (isPrime == true) {
-      vec.push_back(num);
-      count++;
-      std::cout << count << "\t" << vec[count-1] <<std::endl;
+void rtime_to_file (const std::string& fileName, 
+    std::function<std::vector <unsigned long int>(double &n)> &f){    
+    std::ofstream fileOut;
+    fileOut.open(fileName);
+    fileOut << "%column 1: no of prime numbers" << std::endl;
+    fileOut << "%column 2: run time (in second)"<<std::endl;
+    std::array<double,4> v = {std::pow(10,3),std::pow(10,4),
+          std::pow(10,5),std::pow(10,6)};
+    //std::array<double,4> v = {100,1000,10000,20000};
+    for (int i = 0; i < v.size(); i++) {
+        std::chrono::time_point<std::chrono::system_clock> start, end;
+        start = std::chrono::system_clock::now();
+        std::vector<unsigned long int> primes = f(v[i]);
+        //print_primes(v[i],primes);
+        end = std::chrono::system_clock::now();
+        std::chrono::duration<double> elapsed_seconds = end-start;
+        fileOut << std::fixed << std::setprecision(0)<< v[i] << "\t";
+        fileOut << std::fixed << std::setprecision(14)<<elapsed_seconds.count(); 
+        fileOut << std::endl;
+        std::cout << "elapsed time to find and print " <<std::fixed << std::setprecision(0) << v[i] << " prime numbers is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
     }
-    num++;
-  }
 }
 
 
