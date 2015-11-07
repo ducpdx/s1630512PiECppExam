@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  7 NOV 2015 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  8 NOV 2015 00:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -649,7 +649,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{
-                  print_primes}$ for finding prime numbers and printing out ...
+                  print_primes}$ for searching prime numbers and printing ou...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -665,7 +665,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{
-                  print_primes}$ for finding prime numbers and printing out ...
+                  print_primes}$ for searching prime numbers and printing ou...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -685,7 +685,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{print_primes}
-                               $ for finding prime numbers and printing out ...
+                               $ for searching prime numbers and printing ou...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -697,7 +697,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{print_primes}
-                               $ for finding prime numbers and printing out ...
+                               $ for searching prime numbers and printing ou...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -713,7 +713,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{print_primes}
-                               $ for finding prime numbers and printing out ...
+                               $ for searching prime numbers and printing ou...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -1370,6 +1370,9 @@ You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 179.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
@@ -1504,7 +1507,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.194 ... std::vector <unsigned long int>& primes)
-                                                  }$ and  prime number findi...
+                                                  }$ and  prime number searc...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -1516,7 +1519,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.194 ...std::vector <unsigned long int>& primes)}
-                                                  $ and  prime number findin...
+                                                  $ and  prime number search...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -1532,7 +1535,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.194 ...std::vector <unsigned long int>& primes)}
-                                                  $ and  prime number findin...
+                                                  $ and  prime number search...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -1826,6 +1829,9 @@ section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 216.
+
 [3]
 ! Text line contains an invalid character.
 l.218 $$10^6 * ^^C
@@ -1833,80 +1839,3194 @@ l.218 $$10^6 * ^^C
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 The $\lstinline{
+                      primes_to_file}$ function for writing to a file (on di...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 The $\lstinline{
+                      primes_to_file}$ function for writing to a file (on di...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+5.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 The $\lstinline{primes_to_file}
+                                     $ function for writing to a file (on di...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 The $\lstinline{primes_to_file}
+                                     $ function for writing to a file (on di...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.225 The $\lstinline{primes_to_file}
+                                     $ function for writing to a file (on di...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+6.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+6.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...ng}[title = $\lstinline{primes_to_file}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.243 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.243 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `fig1' on page 4 undefined on input line 247.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...g graph. The search function $\lstinline{
+                                                  modTestDiv}$ is faster tha...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...g graph. The search function $\lstinline{
+                                                  modTestDiv}$ is faster tha...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+7.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e search function $\lstinline{modTestDiv}
+                                                  $ is faster than $\lstinli...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e search function $\lstinline{modTestDiv}
+                                                  $ is faster than $\lstinli...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e search function $\lstinline{modTestDiv}
+                                                  $ is faster than $\lstinli...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...{modTestDiv}$ is faster than $\lstinline{
+                                                  bruteForce}$. However, the...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...{modTestDiv}$ is faster than $\lstinline{
+                                                  bruteForce}$. However, the...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+7.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...}$ is faster than $\lstinline{bruteForce}
+                                                  $. However, the $\lstinlin...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...}$ is faster than $\lstinline{bruteForce}
+                                                  $. However, the $\lstinlin...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...}$ is faster than $\lstinline{bruteForce}
+                                                  $. However, the $\lstinlin...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e{bruteForce}$. However, the $\lstinline{
+                                                  bruteForce}$ can be simply...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e{bruteForce}$. However, the $\lstinline{
+                                                  bruteForce}$ can be simply...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+7.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e}$. However, the $\lstinline{bruteForce}
+                                                  $ can be simply modified t...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e}$. However, the $\lstinline{bruteForce}
+                                                  $ can be simply modified t...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e}$. However, the $\lstinline{bruteForce}
+                                                  $ can be simply modified t...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...}$ can be simply modified to $\lstinline{
+                                                  bruteForceM}$ which result...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...}$ can be simply modified to $\lstinline{
+                                                  bruteForceM}$ which result...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+7.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...mply modified to $\lstinline{bruteForceM}
+                                                  $ which results in faster ...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...mply modified to $\lstinline{bruteForceM}
+                                                  $ which results in faster ...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...mply modified to $\lstinline{bruteForceM}
+                                                  $ which results in faster ...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...ing time is recored by using $\lstinline{
+                                                  std::chrono::time_point<st...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...ing time is recored by using $\lstinline{
+                                                  std::chrono::time_point<st...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+7.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...time is recored by using $\lstinline{std:
+                                                  :chrono::time_point<std::c...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...recored by using $\lstinline{std::chrono:
+                                                  :time_point<std::chrono::s...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...sing $\lstinline{std::chrono::time_point<
+                                                  std::chrono::system_clock>...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ... $\lstinline{std::chrono::time_point<std:
+                                                  :chrono::system_clock>}$. ...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...line{std::chrono::time_point<std::chrono:
+                                                  :system_clock>}$. The runn...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...no::time_point<std::chrono::system_clock>
+                                                  }$. The running times are ...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...o::time_point<std::chrono::system_clock>}
+                                                  $. The running times are t...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...o::time_point<std::chrono::system_clock>}
+                                                  $. The running times are t...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e measured with the function $\lstinline{
+                                                  rtime_to_file}$. Code snip...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...e measured with the function $\lstinline{
+                                                  rtime_to_file}$. Code snip...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+7.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...h the function $\lstinline{rtime_to_file}
+                                                  $. Code snippets for  $\ls...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...h the function $\lstinline{rtime_to_file}
+                                                  $. Code snippets for  $\ls...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...h the function $\lstinline{rtime_to_file}
+                                                  $. Code snippets for  $\ls...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...o_file}$. Code snippets for  $\lstinline{
+                                                  rtime_to_file}$ and $\lsti...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...o_file}$. Code snippets for  $\lstinline{
+                                                  rtime_to_file}$ and $\lsti...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+7.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ... snippets for  $\lstinline{rtime_to_file}
+                                                  $ and $\lstinline{bruteFor...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ... snippets for  $\lstinline{rtime_to_file}
+                                                  $ and $\lstinline{bruteFor...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ... snippets for  $\lstinline{rtime_to_file}
+                                                  $ and $\lstinline{bruteFor...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...stinline{rtime_to_file}$ and $\lstinline{
+                                                  bruteForceM}$  are shown b...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...stinline{rtime_to_file}$ and $\lstinline{
+                                                  bruteForceM}$  are shown b...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+7.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...me_to_file}$ and $\lstinline{bruteForceM}
+                                                  $  are shown below:
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...me_to_file}$ and $\lstinline{bruteForceM}
+                                                  $  are shown below:
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...me_to_file}$ and $\lstinline{bruteForceM}
+                                                  $  are shown below:
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<rt-vs-n.png, id=89, 578.16pt x 433.62pt>
+File: rt-vs-n.png Graphic file (type png)
+ <use rt-vs-n.png>
+Package pdftex.def Info: rt-vs-n.png used on input line 250.
+(pdftex.def)             Requested size: 375.579pt x 234.74017pt.
+
 ! Text line contains an invalid character.
-l.227 Use symbolic di
-                      erentiation from the matlab symbolic toolbox to derive...
+l.251 \caption{^^A
+                  log-log plot of run-time against $N$}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--233
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
-
- []
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 254.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 25
+4.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 25
+4.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...ing}[title = $\lstinline{rtime_to_file}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 264.
+
+[5 <./rt-vs-n.png>]
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.267 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.267 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 26
+8.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 26
+8.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...sting}[title = $\lstinline{bruteForceM}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.278 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.278 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Text line contains an invalid character.
+l.280 More e^^N
+               fficient ways of computing prime numbers exist. Find and impl...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.283 ...osthenes is used for illustrating an e^^N
+                                                  fficient way to search for...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+
+LaTeX Warning: Reference `fig2' on page 6 undefined on input line 284.
+
+<rt-vs-n-eratos.png, id=134, 578.16pt x 433.62pt>
+File: rt-vs-n-eratos.png Graphic file (type png)
+ <use rt-vs-n-eratos.png>
+Package pdftex.def Info: rt-vs-n-eratos.png used on input line 287.
+(pdftex.def)             Requested size: 375.579pt x 234.74017pt.
+
+! Text line contains an invalid character.
+l.288 \caption{^^A
+                  log-log plot of run-time against $N$}
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 ... high complexity method like $\lstinline{
+                                                  bruteForce}$ already takes...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 ... high complexity method like $\lstinline{
+                                                  bruteForce}$ already takes...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
+1.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 ...exity method like $\lstinline{bruteForce}
+                                                  $ already takes the order ...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 ...exity method like $\lstinline{bruteForce}
+                                                  $ already takes the order ...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 ...exity method like $\lstinline{bruteForce}
+                                                  $ already takes the order ...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 292.
+
+[6 <./rt-vs-n-eratos.png>]
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
+2.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 29
+2.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.292 ...ting}[title = $\lstinline{Eratosthenes}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\lst@um'@ ->\lst@ifupquote \textquotesingle 
+                                            \else \char 39\relax \fi 
+l.293 ...= n * std::log(n*std::log(n)); //Rosser's
+                                                   theorem
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.310 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.310 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+
+Package natbib Warning: Citation `ray2013' on page 7 undefined on input line 31
+6.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
+
+
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 317.
+
+[7]
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ... $d$ is stored by 2-D vector $\lstinline{
+                                                  std::vector<std::vector<in...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ... $d$ is stored by 2-D vector $\lstinline{
+                                                  std::vector<std::vector<in...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+8.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ... is stored by 2-D vector $\lstinline{std:
+                                                  :vector<std::vector<int>> ...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...ed by 2-D vector $\lstinline{std::vector<
+                                                  std::vector<int>> d}$. To ...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...y 2-D vector $\lstinline{std::vector<std:
+                                                  :vector<int>> d}$. To reco...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...ctor $\lstinline{std::vector<std::vector<
+                                                  int>> d}$. To reconstruct ...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...stinline{std::vector<std::vector<int>> d}
+                                                  $. To reconstruct the shor...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...stinline{std::vector<std::vector<int>> d}
+                                                  $. To reconstruct the shor...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...stinline{std::vector<std::vector<int>> d}
+                                                  $. To reconstruct the shor...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...$s$ which is stored by a 2-D $\lstinline{
+                                                  std::vector<std::vector<in...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...$s$ which is stored by a 2-D $\lstinline{
+                                                  std::vector<std::vector<in...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+8.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...which is stored by a 2-D $\lstinline{std:
+                                                  :vector<std::vector<int>> ...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ... stored by a 2-D $\lstinline{std::vector<
+                                                  std::vector<int>> s}$. All...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...red by a 2-D $\lstinline{std::vector<std:
+                                                  :vector<int>> s}$. All the...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ... 2-D $\lstinline{std::vector<std::vector<
+                                                  int>> s}$. All the element...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...stinline{std::vector<std::vector<int>> s}
+                                                  $. All the elements of nod...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...stinline{std::vector<std::vector<int>> s}
+                                                  $. All the elements of nod...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...stinline{std::vector<std::vector<int>> s}
+                                                  $. All the elements of nod...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...uare of nodes. The functions $\lstinline{
+                                                  lines_count}$ and $\lstinl...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...uare of nodes. The functions $\lstinline{
+                                                  lines_count}$ and $\lstinl...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+8.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...s. The functions $\lstinline{lines_count}
+                                                  $ and $\lstinline{input2ve...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...s. The functions $\lstinline{lines_count}
+                                                  $ and $\lstinline{input2ve...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...s. The functions $\lstinline{lines_count}
+                                                  $ and $\lstinline{input2ve...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...\lstinline{lines_count}$ and $\lstinline{
+                                                  input2vector}$ are used to...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...\lstinline{lines_count}$ and $\lstinline{
+                                                  input2vector}$ are used to...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+8.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...nes_count}$ and $\lstinline{input2vector}
+                                                  $ are used to obtain the n...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...nes_count}$ and $\lstinline{input2vector}
+                                                  $ are used to obtain the n...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...nes_count}$ and $\lstinline{input2vector}
+                                                  $ are used to obtain the n...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...hich is done by the function $\lstinline{
+                                                  WFI}$.
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ...hich is done by the function $\lstinline{
+                                                  WFI}$.
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 31
+8.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ... is done by the function $\lstinline{WFI}
+                                                  $.
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ... is done by the function $\lstinline{WFI}
+                                                  $.
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.318 ... is done by the function $\lstinline{WFI}
+                                                  $.
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320 \begin{lstlisting}
+                        
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320 \begin{lstlisting}
+                        
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.331 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.331 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...t for the implementation of  $\lstinline{
+                                                  lines_count}$ and $\lstinl...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...t for the implementation of  $\lstinline{
+                                                  lines_count}$ and $\lstinl...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+3.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...plementation of  $\lstinline{lines_count}
+                                                  $ and $\lstinline{input2ve...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...plementation of  $\lstinline{lines_count}
+                                                  $ and $\lstinline{input2ve...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...plementation of  $\lstinline{lines_count}
+                                                  $ and $\lstinline{input2ve...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...\lstinline{lines_count}$ and $\lstinline{
+                                                  input2vector}$ are shown b...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...\lstinline{lines_count}$ and $\lstinline{
+                                                  input2vector}$ are shown b...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+3.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...nes_count}$ and $\lstinline{input2vector}
+                                                  $ are shown below:
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...nes_count}$ and $\lstinline{input2vector}
+                                                  $ are shown below:
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.333 ...nes_count}$ and $\lstinline{input2vector}
+                                                  $ are shown below:
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+4.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 33
+4.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ...sting}[title = $\lstinline{lines_count}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.341 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 34
+3.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 34
+3.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.343 ...ting}[title = $\lstinline{input2vector}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 351.
+
+[8]
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.357 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.357 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ™ in font cmr12!
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 36
+1.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 36
+1.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...in{lstlisting}[title = $\lstinline{WFI}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.380 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.380 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.381 ...s the base case. The function$\lstinline{
+                                                  path_recon}$ is used for p...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.381 ...s the base case. The function$\lstinline{
+                                                  path_recon}$ is used for p...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 38
+1.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.381 ...case. The function$\lstinline{path_recon}
+                                                  $ is used for path reconst...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.381 ...case. The function$\lstinline{path_recon}
+                                                  $ is used for path reconst...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.381 ...case. The function$\lstinline{path_recon}
+                                                  $ is used for path reconst...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 382.
+
+[9]
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 38
+2.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 38
+2.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 ...isting}[title = $\lstinline{path_recon}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.393 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.393 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...l the pair of nodes then run $\lstinline{
+                                                  WFI}$ and $\lstinline{path...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...l the pair of nodes then run $\lstinline{
+                                                  WFI}$ and $\lstinline{path...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 39
+4.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...e pair of nodes then run $\lstinline{WFI}
+                                                  $ and $\lstinline{path_rec...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...e pair of nodes then run $\lstinline{WFI}
+                                                  $ and $\lstinline{path_rec...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...e pair of nodes then run $\lstinline{WFI}
+                                                  $ and $\lstinline{path_rec...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...en run $\lstinline{WFI}$ and $\lstinline{
+                                                  path_recon}$ This will be ...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...en run $\lstinline{WFI}$ and $\lstinline{
+                                                  path_recon}$ This will be ...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 39
+4.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...tinline{WFI}$ and $\lstinline{path_recon}
+                                                  $ This will be done in the...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...tinline{WFI}$ and $\lstinline{path_recon}
+                                                  $ This will be done in the...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.394 ...tinline{WFI}$ and $\lstinline{path_recon}
+                                                  $ This will be done in the...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.395 \begin{lstlisting}
+                        
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.395 \begin{lstlisting}
+                        
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.405 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.405 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./s1630512-Nguyen-Manh-Duc-CPP-1A15.bbl)
+
+Package lastpage Warning: Rerun to get the references right on input line 411.
 
 
 AED: lastpage setting LastPage
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
- (./s1630512-Nguyen-Manh-Duc-CPP-1A15.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
-Package rerunfilecheck Info: File `s1630512-Nguyen-Manh-Duc-CPP-1A15.out' has n
-ot changed.
-(rerunfilecheck)             Checksum: 61D979D66B1A1BE335D6B09AE222C095;743.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 411.
+
+[10]
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 411.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 411.
+(./s1630512-Nguyen-Manh-Duc-CPP-1A15.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 411.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 411.
+
+
+Package rerunfilecheck Warning: File `s1630512-Nguyen-Manh-Duc-CPP-1A15.out' ha
+s changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `s1630512-Nguyen-Manh-Duc-CPP-1A15.o
+ut':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  B8F639F5421F0ADC81B98E590A99963C;919.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 411.
  ) 
 Here is how much of TeX's memory you used:
- 9655 strings out of 494501
- 143097 string characters out of 6167030
+ 9898 strings out of 494501
+ 146389 string characters out of 6167030
  311889 words of memory out of 5000000
- 12728 multiletter control sequences out of 15000+600000
- 19455 words of font info for 72 fonts, out of 8000000 for 9000
+ 12823 multiletter control sequences out of 15000+600000
+ 19756 words of font info for 73 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 40i,15n,67p,377b,1086s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,15n,67p,1225b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 0.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx6.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmbxti10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015basic/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015basic/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015basic/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015basic/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015basic
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015b
-asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on s1630512-Nguyen-Manh-Duc-CPP-1A15.pdf (5 pages, 171893 bytes)
-.
+amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015basic/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015basic/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015basic/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015basic/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015basic/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015basic/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015bas
+ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015
+basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
+2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on s1630512-Nguyen-Manh-Duc-CPP-1A15.pdf (10 pages, 292313 bytes
+).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 71 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 333 compressed objects within 4 object streams
+ 212 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

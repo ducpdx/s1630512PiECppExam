@@ -142,10 +142,10 @@ correspondence: nguyenmanhduc@student.utwente.nl or ngmaduc@gmail.com}}
 %\maketitle
 \section{Exercise 1}
 \subsection{Question 1.1}
-Write a $\CC$ program to compute the first N prime numbers, where N is given by the user. Use dynamic arrays to store the primes and use this information in the mod test. 
+Write a $\CC$ program to compute the first $N$ prime numbers, where $N$ is given by the user. Use dynamic arrays to store the primes and use this information in the mod test. 
 \subsubsection{Answer.}
 Three functions are used for this question including $\lstinline{bruteForce, modTest}$ and 
-$\lstinline{print_primes}$ for finding prime numbers and printing out the result in console. Passing by reference are chosen to avoid unnecessary copy of variables.
+$\lstinline{print_primes}$ for searching prime numbers and printing out the result in console. Passing by reference are chosen to avoid unnecessary copy of variables.
 \begin{lstlisting}
 std::vector <unsigned long int> bruteForce (int &n);
 std::vector <unsigned long int> modTest (int &n);
@@ -191,7 +191,7 @@ The method chosen to create dynamic arrays to store the primes is $\lstinline{st
 Write to the screen a list of the first 10000 primes in the format below; where $p(n)$ is the
 $n^{th}$ prime number. Report only the last five lines. Comment on the behaviour of the ratio $n * ln(p(n))/p(n)$ as n gets large.
 \subsubsection{Answer.}
-The $\lstinline{void print_ratio (int &n, const std::vector <unsigned long int>& primes)}$ and  prime number finding functions together generate the required ratio. As $n$ gets large, the ratio tends to converge to 1. Until $10^5-th$ prime number, the ratio is 1.103.\\\\
+The $\lstinline{void print_ratio (int &n, const std::vector <unsigned long int>& primes)}$ and  prime number search functions together generate the required ratio. As $n$ gets large, the ratio tends to converge to 1. Until $10^5-th$ prime number, the ratio is 1.103.\\\\
 The last five lines are and the $\lstinline{print_ratio}$ are listed below:
 \begin{lstlisting}
 9996     :       104707  :       1.10348856177824
@@ -222,23 +222,191 @@ $$p(10^6) \approx 15022800$$
 Instead of writing to the screen, write to a file (on disk) a list containing just the prime
 numbers. Print eight numbers per line, such that all numbers have the same space.
 \subsubsection{Answer.}
+The $\lstinline{primes_to_file}$ function for writing to a file (on disk) with eight numbers per line is shown below: 
+\begin{lstlisting}[title = $\lstinline{primes_to_file}$]
+void primes_to_file (int &n, const std::vector <unsigned long int>& primes,
+        const std::string& fileName){
+        if(n >= 1){
+            std::ofstream fileOut;
+            fileOut.open(fileName);
+            for (int i = 0; i < primes.size(); i++) {
+                fileOut << primes[i] << "\t";
+                if ((i+1) % 8 == 0) {//Print eight numbers per line
+                    fileOut<<std::endl;
+                }	
+            }
+        }
+        else{
+            std::cerr << "Invalid Input" << std::endl;
+        }
+}
+\end{lstlisting}
+\subsection{Question 1.5}
+Time your code for $N = 10^3; 10^4; 10^5$ and $10^6$. Make a log-log plot of run-time against $N$ for both codes. What can we say from the log-log plot? Do this analysis for brute force and suggested speed up and comment on the results.
+\subsubsection{Answer.}
+Figure \eqref{fig1} is the log-log plot of run-time against $N$ showing that within the range of $N$ the linear relationship of logarithmic values of run-time and $N$ which also mean the running time is propotional to $N$ to the power of the slope of the straight line of the log-log graph. The search function $\lstinline{modTestDiv}$ is faster than $\lstinline{bruteForce}$. However, the $\lstinline{bruteForce}$ can be simply modified to $\lstinline{bruteForceM}$ which results in faster running time. The only modification is instead of performing mod test from 2 to $n$ for each number $n$, we only do mod test from 2 to square root of $n$, because number $n$ is not a prime number means that it always has a divisor less than or equal square root of $n$. Otherwise, the number $n$ is a prime number.Measurement of running time is recored by using $\lstinline{std::chrono::time_point<std::chrono::system_clock>}$. The running times are then saved to a file for further processing. All the codes are measured with the function $\lstinline{rtime_to_file}$. Code snippets for  $\lstinline{rtime_to_file}$ and $\lstinline{bruteForceM}$  are shown below:
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\linewidth, height=0.5\linewidth]{rt-vs-n.png}
+\caption{log-log plot of run-time against $N$}
+\label{fig1}
+\end{figure}
+\begin{lstlisting}[title = $\lstinline{rtime_to_file}$]
+void rtime_to_file (const std::string& fileName, 
+    std::function<std::vector <unsigned long int>(double &n)> &f){    
+ 	...
+    for (int i = 0; i < v.size(); i++) {
+        std::chrono::time_point<std::chrono::system_clock> start, end;
+        start = std::chrono::system_clock::now();
+        std::vector<unsigned long int> primes = f(v[i]);//only measure this function
+        end = std::chrono::system_clock::now();
+        std::chrono::duration<double> elapsed_seconds = end-start;
+ 	...    
+    }
+}
+\end{lstlisting}
+\begin{lstlisting}[title = $\lstinline{bruteForceM}$]
+for (int count = 2; count <= n; ){//counter from 1; "2" included before
+            for (c = 2; c <= sqrt(num); c++){//non prime has divisor lt sqrt
+                ...
+            }
+            if (c > sqrt(num)) {//to this point no divisor up to n, Prime!
+                ...
+            }
+            num++;  
+        }
+\end{lstlisting}
+\subsection{Question 1.6}
+More efficient ways of computing prime numbers exist. Find and implement one and report
+the analysis of part 5 for this algorithm. Comment on the results.
+\subsubsection{Answer.}
+Sieve of Eratosthenes is used for illustrating an efficient way to search for prime numbers.
+The log-log plot of run-time against $N$ is shown in Figure \eqref{fig2}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth, height=0.5\linewidth]{rt-vs-n-eratos.png}
+\caption{log-log plot of run-time against $N$}
+\label{fig2}
+\end{figure}\\
+The idea is just to mark all the number in the range of interest as prime then update the mark as non-prime if a number is the multiplication of the previous primes. It illustrate the fundamental property of prime number that any non-prime number can be represented by a multiplication of prime numbers. The code snippet implementing Sieve of Eratosthenes is shown below. The Sieve of Eratosthenes requires the largest number to be found as an input. We can use the ratio from Question 1.3 or Rosser's theorem which states that $p(n) < n * log(n*log(n))$. For searching large prime numbers, the linear relationship will not be held. Further study on complexity of algorithm showing that is beyond the scope of this report. However, a simple test shows that for only 7 digits prime number, high complexity method like $\lstinline{bruteForce}$ already takes the order of days. Therefore, it should not be used for finding large prime numbers. 
+\begin{lstlisting}[title = $\lstinline{Eratosthenes}$]
+	unsigned long int max = n * std::log(n*std::log(n)); //Rosser's theorem
+    for (unsigned long int p=2; p < max; p++){ // for all elements in array
+        if (primes.size() > n-1){//keep track first n prime only, vector count from 0
+            break;
+        }
+        else if(isPrime[p] == true){ // it is not multiple of any other prime
+            primes.push_back(p);
+        }
+        // mark all multiples of prime selected above as non primes
+        int c=2;
+        int mul = p * c;
+        while(mul <= max){
+            isPrime[mul] = false;
+            c++;
+            mul = p*c;
+        }        
+    }
+\end{lstlisting}
 
-\section{Question 2}
-Use symbolic dierentiation from the matlab symbolic toolbox to derive the magnitude of
-the force as a function of $r_{ij}$ .\\\\
-\textit{ANSWER}
-\section{Question 3}
-Plot the force fij as a function of the distance $r_{ij}$.\\\\
-\textit{ANSWER}
-\section{Question 4}
-Write two matlab functions that solve the differential equations, for a 1D system of particles, using Euler Forward algorithm and the Verlet algorithm. Comment on which algorithm you prefer and state why?\\\\
-\textit{ANSWER}
-\section{Question 5}
-Plot the potential $V_{ij}$ as a function of the distance rij . Plot separately both the attractive and repulsive contribution.\\\\
-\textit{ANSWER}
-\section{Question 6}
-Plot the potential $V_{ij}$ as a function of the distance rij . Plot separately both the attractive and repulsive contribution.\\\\
-\textit{ANSWER}
+\section{Exercise 3}
+\subsection{Question 3.1}
+Use any algorithm to compute the shortest distance between every set of cities and write this information to disk with the route as a list of cities..
+\subsubsection{Answer.}
+The question ask for the shortest distance between every set of cities thus Floyd-Warshall’s algorithm which is well-known for solving to solve the All-Pairs-Shortest-Path problem is chosen. This report will try to cover key points of the algorithm as well as explain how to implement it it $\CC$. The details of Floyd-Warshall’s algorithm used for the code in this exercise is described in Graph Theory reference. \cite[]{ray2013}\\
 
+The input file given is very suitable for the algorithm because it is already in the form of adjacency matrix (distance matrix) which give all information about the cities and how they are connected. They are also known as nodes and edges' length in graph theory. The distance matrix $d$ is stored by 2-D vector $\lstinline{std::vector<std::vector<int>> d}$. To reconstruct the shortest path, we also need a node sequence matrix $s$ which is stored by a 2-D $\lstinline{std::vector<std::vector<int>> s}$. All the elements of node sequence matrix $s$ which means that initially the shortest path is the direct connection from citi $i$ to city $j$. The size of both vector are the square of nodes. The functions $\lstinline{lines_count}$ and $\lstinline{input2vector}$ are used to obtain the number of nodes and create the distance matrix, respectively. We are now ready to implement Floyd-Warshall’s algorithm which is done by the function $\lstinline{WFI}$. 
+
+\begin{lstlisting}
+int lines_count (const std::string& fileName);
+std::vector<std::vector<int>> input2vector (const std::string& fileName);
+void WFI(int &nodes, std::vector<std::vector<int>>& d, 
+        std::vector<std::vector<int>>& s);
+int main()
+{  
+	...    
+    std::vector<std::vector<int>> s(nodes,std::vector<int>(nodes, 0)); 
+    ...
+}
+\end{lstlisting}
+
+The code snippet for the implementation of  $\lstinline{lines_count}$ and $\lstinline{input2vector}$ are shown below:
+\begin{lstlisting}[title = $\lstinline{lines_count}$]
+std::ifstream fileIn(fileName);
+    int n =0;
+    std::string line;
+    while (std::getline(fileIn , line)){
+        n++;//increase n after each line
+    }
+\end{lstlisting}
+
+\begin{lstlisting}[title = $\lstinline{input2vector}$]
+while (std::getline(fileIn , line)){
+        std::vector<int> lineData;
+        std::istringstream  lineStream(line);
+        int value;
+        // Read an integer at a time from the line
+        while(lineStream >> value){
+            // Add the integers from a line to a 1D vector
+            lineData.push_back(value);
+        }
+        // When all the integers have been read add the 1D array
+        // into a 2D array (as one line in the 2D array)
+        d.push_back(lineData);
+    }
+\end{lstlisting}
+
+Floyd-Warshall's algorithm is a recursive algorithm which updates distance matrix $d$ and 
+node sequence matrix $s$ in each step. We will run a loop from the first node to the last note. For each iteration, it simply tells whether a city $k$ needs to be included for shortest in the path between city $i$ is city $j$. It will be updated in node sequence matrix $s$ as part of the shortest path and will be permanently as part of the shortest path. The algorithm behave like a greedy algorithm as it prefers more nodes and shortest path. We need the latest status of distance matrix $d$ since it stores the current shortest distance between city $i$ is city $j$. It will only be updated when the current shortest distance from is less than the distance if we include a new node $k$ in the shortest path when we compare the distance in each iteration. There is one small problem with this algorithm that it could not record multiple current shortest distance when it happens to be the equality case for the comparision of the iteration. In this case, I choose to include the one with more nodes in the the shortest paths. The implementaion of Floyd-Warshall’s algorithm is shown below:
+\begin{lstlisting}[title = $\lstinline{WFI}$]
+	for (int k = 1; k <= nodes; k++){
+        for (int i = 1; i <= nodes; i++){
+            for (int j = 1; j <= nodes; j++){
+                //If the path with two edges is less than the path with one edge
+                //node that algorithm is from 1 but vector is from 0
+                if(i!=k && j!=k && i!=j){ 
+                    if (d[i-1][j-1] >= (d[i-1][k-1] + d[k-1][j-1])){
+                        //choose the one with more nodes
+                        //Set the cost of the edge to be the lesser cost.
+                        d[i-1][j-1] = (d[i-1][k-1] + d[k-1][j-1]);
+                        //This ensures proper path reconstruction. 
+                        //at this point increase to k+1 to continue algorithm
+                        s[i-1][j-1] = k;
+                    }
+                }
+            }  	  
+		}
+    }        
+\end{lstlisting}
+Reconstructing the shortest path is like going in a zig-zag in the latest node sequence matrix $s$. The element $s[i][j]$ will tell if the node $k$ is needed to be included in the shortest path. If there is a k, the recuresion will be done for $s[i][k]$ and $s[k][j]$ and it will stops when $k=0$ which is the base case. The function$\lstinline{path_recon}$ is used for path reconstruction and it is shown as below:
+\begin{lstlisting}[title = $\lstinline{path_recon}$]
+void path_recon(std::ofstream& fileOut1, int& n1,int& n2, 
+        std::vector<std::vector<int>>& s){
+    int k;
+    k = s[n1-1][n2-1];//start and destination, remember to -1 in the index
+    if (k != 0){
+        path_recon(fileOut1,n1,k,s);//recursive
+        fileOut1 << " - "<< k;//add - to separate new nodes
+        path_recon(fileOut1,k,n2,s);//recursive
+    }
+} 
+\end{lstlisting}
+To record all the shortest distance and the shortest path to a file, now all we need to do is to run a loop so that it covers all the pair of nodes then run $\lstinline{WFI}$ and $\lstinline{path_recon}$ This will be done in the implemetation below:
+\begin{lstlisting}
+for (int i = 1; i <= d.size(); i++){
+            for (int j = i+1; j <= d[i].size(); j++){
+                fileOut1 << i;
+                path_recon(fileOut1,i,j,s);
+                fileOut1 << " - " <<j; 
+                fileOut1 << "\t\t" << d[i-1][j-1];
+                fileOut1 << std::endl;
+            }           
+        }
+\end{lstlisting}
+
+
+\bibliographystyle{jfm}
+% Note the spaces between the initials
+\bibliography{ppr}
 \end{document}
      

@@ -31,9 +31,9 @@ int main( ){
 }
 
 std::vector<unsigned long int> Eratosthenes(double& n){
-    unsigned long int max = n * std::log(n*std::log(n)); 
     std::vector<bool> isPrime(max, true);
     std::vector<unsigned long int> primes; 
+    unsigned long int max = n * std::log(n*std::log(n)); //Rosser's theorem
     for (unsigned long int p=2; p < max; p++){ // for all elements in array
         if (primes.size() > n-1){//keep track first n prime only, vector count from 0
             break;
@@ -80,6 +80,6 @@ void rtime_to_file (const std::string& fileName,
         fileOut << std::fixed << std::setprecision(0)<< v[i] << "\t";
         fileOut << std::fixed << std::setprecision(14)<<elapsed_seconds.count(); 
         fileOut << std::endl;
-        std::cout << "elapsed time to find and print " <<std::fixed << std::setprecision(0) << v[i] << " prime numbers is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
+        std::cout << "elapsed time to find" <<std::fixed << std::setprecision(0) << v[i] << " prime numbers is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
     }
 }

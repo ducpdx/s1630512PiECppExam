@@ -19,7 +19,7 @@ int main( ){
         {"bruteForce.txt", "modTestDiv.txt", "bruteForceM.txt"};   
     std::array<std::function<std::vector <unsigned long int>(double &n)>,3>
         function = {bruteForce, modTestDiv,bruteForceM};
-    for (int i = 0; i < fileName.size()-2; i++) {
+    for (int i = 0; i < fileName.size(); i++) {
         rtime_to_file(fileName[i], function[i]);
         }
     return 0; 
@@ -117,14 +117,14 @@ void rtime_to_file (const std::string& fileName,
     for (int i = 0; i < v.size(); i++) {
         std::chrono::time_point<std::chrono::system_clock> start, end;
         start = std::chrono::system_clock::now();
-        std::vector<unsigned long int> primes = f(v[i]);
+        std::vector<unsigned long int> primes = f(v[i]);//only measure this function
         //print_primes(v[i],primes);
         end = std::chrono::system_clock::now();
         std::chrono::duration<double> elapsed_seconds = end-start;
-        fileOut << std::fixed << std::setprecision(0)<< v[i] << "\t";
+        fileOut << std::fixed << std::setprecision(0)<< v[i] << "\t";//fix precision
         fileOut << std::fixed << std::setprecision(14)<<elapsed_seconds.count(); 
         fileOut << std::endl;
-        std::cout << "elapsed time to find and print " <<std::fixed << std::setprecision(0) << v[i] << " prime numbers is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
+        std::cout << "elapsed time to find" <<std::fixed << std::setprecision(0) << v[i] << " prime numbers is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
     }
 }
 

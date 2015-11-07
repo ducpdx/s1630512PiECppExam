@@ -1,0 +1,8 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[Ray(2013)]{ray2013}
+{\sc Ray, Santanu~Saha} 2013 {\em {Graph Theory with Algorithms and Its
+  Applications}\/}. Springer, India, Private Ltd.
+
+\end{thebibliography}
