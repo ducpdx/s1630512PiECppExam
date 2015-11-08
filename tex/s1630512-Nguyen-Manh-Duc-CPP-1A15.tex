@@ -144,8 +144,8 @@ correspondence: nguyenmanhduc@student.utwente.nl or ngmaduc@gmail.com.    The co
 \subsection{Question 1.1}
 Write a $\CC$ program to compute the first $N$ prime numbers, where $N$ is given by the user. Use dynamic arrays to store the primes and use this information in the mod test. 
 \subsubsection{Answer.}
-Three functions are used for this question including $\lstinline{bruteForce, modTest}$ and 
-$\lstinline{print_primes}$ for searching prime numbers and printing out the result in console. Passing by reference are chosen to avoid unnecessary copy of variables.
+Three functions were built for this question including $\lstinline{bruteForce, modTest}$ and 
+$\lstinline{print_primes}$ for searching prime numbers and the last one for printing out the results in console. Passing by reference were chosen to avoid unnecessary copy of variables.
 \begin{lstlisting}
 std::vector <unsigned long int> bruteForce (int &n);
 std::vector <unsigned long int> modTest (int &n);
@@ -188,11 +188,11 @@ The method chosen to create dynamic arrays to store the primes is $\lstinline{st
         }
 \end{lstlisting}
 \subsection{Question 1.2}
-Write to the screen a list of the first 10000 primes in the format below; where $p(n)$ is the
+Write to the screen a list of the first 10000 primes in the format given; where $p(n)$ is the
 $n^{th}$ prime number. Report only the last five lines. Comment on the behaviour of the ratio $n * ln(p(n))/p(n)$ as n gets large.
 \subsubsection{Answer.}
-The $\lstinline{void print_ratio (int &n, const std::vector <unsigned long int>& primes)}$ and  prime number search functions together generate the required ratio. As $n$ gets large, the ratio tends to converge to 1. Until $10^5-th$ prime number, the ratio is 1.103.\\\\
-The last five lines are and the $\lstinline{print_ratio}$ are listed below:
+The $\lstinline{void print_ratio (int &n, const std::vector <unsigned long int>& primes)}$ and  prime number search functions together generate the required ratio. As $n$ gets large, the ratio tends to converge to 1. Until $10^5$-th prime number, the ratio is approximately 1.103.\\\\
+The last five lines and function $\lstinline{print_ratio}$ are listed below:
 \begin{lstlisting}
 9996     :       104707  :       1.10348856177824
 9997     :       104711  :       1.10356044403989
@@ -212,11 +212,11 @@ void print_ratio (int &n, const std::vector <unsigned long int>& primes){
 }
 \end{lstlisting}
 \subsection{Question 1.3}
-Based on question 2, give an estimate of the $10^6-th$ prime number.
+Based on question 2, give an estimate of the $10^6$-th prime number.
 \subsubsection{Answer.}
 We use 1.1 for the value of the ratio with $n=10^6$:
 $$10^6 * ln(p(10^6))/p(10^6) \approx 1.1 $$
-Using Wolfram Alpha to solve this equation, the estimate of the $10^6-th$ prime number is:
+Using Wolfram Alpha to solve this equation, the estimate of the $10^6$-th prime number is:
 $$p(10^6) \approx 15022800$$
 \subsection{Question 1.4}
 Instead of writing to the screen, write to a file (on disk) a list containing just the prime
@@ -244,7 +244,7 @@ void primes_to_file (int &n, const std::vector <unsigned long int>& primes,
 \subsection{Question 1.5}
 Time your code for $N = 10^3; 10^4; 10^5$ and $10^6$. Make a log-log plot of run-time against $N$ for both codes. What can we say from the log-log plot? Do this analysis for brute force and suggested speed up and comment on the results.
 \subsubsection{Answer.}
-Figure \eqref{fig1} is the log-log plot of run-time against $N$ showing that within the range of $N$ the linear relationship of logarithmic values of run-time and $N$ which also mean the running time is propotional to $N$ to the power of the slope of the straight line of the log-log graph. The search function $\lstinline{modTestDiv}$ is faster than $\lstinline{bruteForce}$. However, the $\lstinline{bruteForce}$ can be simply modified to $\lstinline{bruteForceM}$ which results in faster running time. The only modification is instead of performing mod test from 2 to $n$ for each number $n$, we only do mod test from 2 to square root of $n$, because number $n$ is not a prime number means that it always has a divisor less than or equal square root of $n$. Otherwise, the number $n$ is a prime number. Measurement of running time is recored by using $\lstinline{std::chrono::time_point<std::chrono::system_clock>}$. The running times are then saved to a file for further processing. All the codes are measured with the function $\lstinline{rtime_to_file}$. Code snippets for  $\lstinline{rtime_to_file}$ and $\lstinline{bruteForceM}$  are shown below:
+Figure \eqref{fig1} shows the log-log plot of run-time against $N$. It can be seen that within the range of $N$ the linear relationship between the logarithmic values of run-time and that of $N$. This also mean that the run-time is propotional to $N$ to the power of the slope of the straight line of the log-log graph. Hence, the search function $\lstinline{modTestDiv}$ is faster than $\lstinline{bruteForce}$. However, the $\lstinline{bruteForce}$ can be simply modified to $\lstinline{bruteForceM}$ which results in faster run-time. The only modification is instead of performing mod test from 2 to $n$ for each number $n$, we only do mod test from 2 to square root of $n$, because a non-prime number number $n$ always has a divisor less than or equal square root of $n$. Otherwise, the number $n$ is a prime number. Measurement of run-time was recored by using $\lstinline{std::chrono::time_point<std::chrono::system_clock>}$. The run-time values have been saved to a file for further processing. All the codes were time-measured with the function $\lstinline{rtime_to_file}$. The code snippets for  $\lstinline{rtime_to_file}$ and $\lstinline{bruteForceM}$  are shown below:
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\linewidth, height=0.5\linewidth]{rt-vs-n.png}
@@ -280,15 +280,15 @@ for (int count = 2; count <= n; ){//counter from 1; "2" included before
 More efficient ways of computing prime numbers exist. Find and implement one and report
 the analysis of part 5 for this algorithm. Comment on the results.
 \subsubsection{Answer.}
-Sieve of Eratosthenes is used for illustrating an efficient way to search for prime numbers.
-The log-log plot of run-time against $N$ is shown in Figure \eqref{fig2}.
+Sieve of Eratosthenes was used for illustrating an efficient way to search for prime numbers. The log-log plot with run-time of Sieve of Eratosthenes against $N$ is shown in Figure \eqref{fig2}.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\linewidth, height=0.5\linewidth]{rt-vs-n-eratos.png}
 \caption{log-log plot of run-time against $N$}
 \label{fig2}
 \end{figure}\\
-The idea is just to mark all the number in the range of interest as prime then update the mark as non-prime if a number is the multiplication of the previous primes. It illustrate the fundamental property of prime number that any non-prime number can be represented by a multiplication of prime numbers. The code snippet implementing Sieve of Eratosthenes is shown below. The Sieve of Eratosthenes requires the largest number to be found as an input. We can use the ratio from Question 1.3 or Rosser's theorem which states that $p(n) < n * log(n*log(n))$. For searching large prime numbers, the linear relationship will not be held. Further study on complexity of algorithm showing that is beyond the scope of this report. However, a simple test shows that for only 7 digits prime number, high complexity method like $\lstinline{bruteForce}$ already takes the order of days. Therefore, it should not be used for finding large prime numbers. 
+The idea is just to mark all the numbers in the range of interest as prime then update the marks as non-prime if a number is the multiplication of the previous primes. It illustrates the fundamental property of prime numbers that any non-prime number can be represented by a multiplication of prime numbers. The code snippet implementing Sieve of Eratosthenes is shown below. The Sieve of Eratosthenes requires the largest number to be found as an input. We can use the ratio from Question 1.3 or Rosser's theorem which states that $p(n) < n * log(n*log(n))$.\\\\
+For searching large prime numbers, the linear relationship in the log-log plot will not be held. Further study on complexity of algorithm for prime search function is beyond the scope of this report. However, a simple test can show that for only 7 digits prime number, high complexity methods like $\lstinline{bruteForce}$ already take the order of days. Therefore, they should not be used for finding large prime numbers. 
 \begin{lstlisting}[title = $\lstinline{Eratosthenes}$]
 	unsigned long int max = n * std::log(n*std::log(n)); //Rosser's theorem
     for (unsigned long int p=2; p < max; p++){ // for all elements in array
@@ -315,7 +315,7 @@ correctly and output the result to the screen.
 Your Reverse Polish Notation calculator should be able to do add, subtract, multiply and
 divide integers.
 \subsubsection{Answer.}
-Four functions are built for an RPN evaluator for integers: $\lstinline{RPN}$ is used for performing arithmethic operation while $\lstinline{parserPostFix}$ and $\lstinline{getFSMCol}$ are used to deal with multi-digit and negative integers. We also need $\lstinline{bool isoperator(char arg)}$ while scanning through a RPn expression. To check for a digit we can use a $\CC$ built-in function $\lstinline{bool isdigit}$.
+Four functions have been built for an RPN evaluator for integers: $\lstinline{RPN}$ is used for performing arithmethic operations while $\lstinline{parserPostFix}$ and $\lstinline{getFSMCol}$ are used to deal with multi-digit and negative integers. We also need $\lstinline{bool isoperator(char arg)}$ to recognize operators while scanning through a RPN expression. To check for a digit we can use a $\CC$ built-in function $\lstinline{bool isdigit}$. The code use the symbol $\sim$ to designate negative numbers.
 \begin{lstlisting}
 double RPN (const std::vector<std::string>& expr);
 std::vector<std::string> parserPostFix(std::string& postfix);
@@ -323,7 +323,7 @@ int getFSMCol(char& currentChar);
 bool isoperator(char arg);
 \end{lstlisting}
 The main idea is to parse $\lstinline{std::string& postfix}$ to a $\lstinline{std::vector<std::string>}$ then perform RPN evaluator. The algorithm for RPN evaluator used in this code is described in programming reference \cite[]{roberts2013}.
-Parsing function $\lstinline{parserPostFix}$ is done by using a Finite State Machine (listed below) to keep track of keyboard strokes.  It will recognize the consecutive keystrokes to combine keystrokes as multi-digit or negavtive numbers then store to vector elements as a string. RPN evaluator will then convert those string to integer before implement its algorithm. 
+Parsing function $\lstinline{parserPostFix}$ was done by using a Finite State Machine (FSM) (listed below) to keep track of keyboard strokes.  It will recognize the consecutive keyboard strokes to combine to a multi-digit or negavtive number then store to a vector element as a string. RPN evaluator will then convert those strings to integer with $\lstinline{c_str}$ before implement its algorithm. 
 \begin{lstlisting}
 std::array <std::array<int,5>, 5> stateTable= 
 {{{0, INTEGER,  NEGATIVE, OPERATOR, SPACE},
@@ -345,13 +345,13 @@ if(currentState == RESTART){
             ++i;
         }
 \end{lstlisting}
-The first column can be undestood as first key stroke and the second column can be understood as second keystroke. The highlight here is whenever the state is RESTART, new element in vector is ready while if the state is not RESTART during several keystrokes like in the case of multi-digit or negavtive numbers, it will continue to store in the current vector element.
+The first column of FSM can be undestood as the first keyboard stroke and the second column can be understood as the second keyboard stroke. The highlight here is whenever the state is RESTART, a new element in vector is ready to be assigned a value while if the state is not RESTART during several keyboard strokes like in the case of multi-digit or negavtive numbers, the code will continue to combine characters to a string in the current vector element.
 \subsection{Question 2.2}
 Extend your code such that it reads the input line-by-line from a file. Each newline marks
 the end of each calculation. Write out the result of each line of the calculation and your
-program should abort when it detects an `end of file' condition.
+program should abort when it detects an `end of file' condition.
 \subsubsection{Answer.}
-Function $\lstinline{inputToPostfix}$ with the powerful $\lstinline{std::getline(fileIn,line)}$ check will produce a \linebreak  $\lstinline{std::vector<std::string>postfix}$ with elements corresponding to RPN of each line. Run a simple loop through this vector and do the same as Question 2.1 will write results on console.
+Function $\lstinline{inputToPostfix}$ with the powerful $\lstinline{std::getline(fileIn,line)}$ check will produce a \linebreak  $\lstinline{std::vector<std::string>postfix}$ with each element corresponding to an RPN expression per line. Running a simple loop through this vector and do the same as Question 2.1 will write results on the console.
 \begin{lstlisting}[title = $\lstinline{inputToPostfix}$]
 std::vector<std::string> inputToPostfix (const std::string& fileName){
     std::vector<std::string> postfix;
@@ -366,7 +366,7 @@ std::vector<std::string> inputToPostfix (const std::string& fileName){
 \subsection{Question 2.3}
 Add in error checking to confirm the entered string can be interpreted as RPN string.
 \subsubsection{Answer.}
-The structure of $\lstinline{try, catch, throw}$ serves as error checking. Errors are defined from $\lstinline{ROPN}$ function. Everytime an error happen, there will be a throw of $\lstinline{std::runtime_error}$ which then will be catched in main fucntion using $\lstinline{e.what()}r$ . The list of errors are described in the code snippets below:
+The structure of $\lstinline{try, catch, throw}$ serves as error checking. Errors were defined from $\lstinline{RPN}$ function. Everytime an error happens, there will be a throw of $\lstinline{std::runtime_error}$ which then will be catched in main fucntion using $\lstinline{e.what()}$ . The list of errors are described in the code snippets below:
 \begin{lstlisting}	
 	if (s.size() < 2){//each operator require 2 operands
     		throw std::runtime_error("Not enough operands"); 
@@ -383,9 +383,9 @@ The structure of $\lstinline{try, catch, throw}$ serves as error checking. Error
     }                       
 \end{lstlisting}
 \subsection{Question 2.4}
-Add in support for the power operator using the symbol $^$
+Add in support for the power operator using the symbol $\^{ }$
 \subsubsection{Answer.}
-RPN evaluator does not need an order to be defined for operations. Thus to add in support for the power operator using the symbol $^$ we only need to add a case in arithmetic operation $\lstinline{switch}$ and a check of the symbol $^$ in $\lstinline{bool isoperator(char arg)}$.
+RPN evaluator does not need an order to be defined for operations. Thus to add in support for the power operator using the symbol $\^{ }$  we only need to add a case in arithmetic operation $\lstinline{switch}$ and a check of the symbol $\^{ }$  in $\lstinline{bool isoperator(char arg)}$.
 
 \begin{lstlisting}[title = $\lstinline{isoperator}$]
 bool isoperator(char arg){
@@ -407,7 +407,7 @@ bool isoperator(char arg){
 Extend your code so that it can read input strings in normal brackets notation. It should
 understand the BODMAS rules.
 \subsubsection{Answer.}
-The question consists of two steps: the first step is to convert infix to postfix notation and the second step is perfrom RPN evaluator. The latter step is already done in upto question 2.4. For the first step, fucntion $\lstinline{infixToPostfix}$ were built. Another function $\lstinline{precendence}$ to determine an order for operations the before we can implement Shunting-yard \cite[]{kushwaha2014}, which was also invented by Edsger Dijkstra. We aslo need a function to read infix notation from file also the code for this question will handle both user input and data file. The fucntions needed for infix notation calculator for integers are listed below:
+The solution consists of two steps: the first step is to convert infix to postfix notation and the second step is to perfrom RPN evaluator. The latter step is already done upto question 2.4. For the first step, fucntion $\lstinline{infixToPostfix}$ were built. We also need function $\lstinline{precendence}$ to determine an order for operations the before we can implement Shunting-yard \cite[]{kushwaha2014}, which was also invented by Edsger Dijkstra. This code can handle both reading infix notation from file and from user input. The fucntions needed for infix notation calculator for integers are listed below:
 \begin{lstlisting}
 std::vector<std::string> inputToInfix (const std::string& fileName);
 std::string infixToPostfix(std::string& infix); 
@@ -417,9 +417,9 @@ double RPN (const std::vector<std::string>& expr);
 std::vector<std::string> parserPostFix(std::string& postfix);
 int getFSMCol(char& currentChar); 
 \end{lstlisting}
-The $\lstinline{precendence}$ is simply to assign value to operator characters following BODMAS rule using $\lstinline{switch}$ . Note that brackets were not assigned a value because it will be processed seperately in $\lstinline{infixToPostfix}$. The function $\lstinline{infixToPostfix}$ also serves as another error checking espically for unexpected and imbalance breackets. Fucntion $\lstinline{precendence}$ and code snippets of $\lstinline{infixToPostfix}$ are listed below:
+Function $\lstinline{precendence}$ is simply assign values to operator characters following BODMAS rule using $\lstinline{switch}$. Note that brackets were not assigned a value because it will be processed seperately in $\lstinline{infixToPostfix}$. Function $\lstinline{infixToPostfix}$ serves as another error checking espically for unexpected and imbalance breackets. Those two above-mentioned functions are listed in the code snippets below:
 \begin{lstlisting}[title = $\lstinline{precendence}$]
-int precendence(char& arg){//Add weight to the operator
+int precendence(char& arg){//Add weight to the operator, high priority high value
     int weight = 0;
     switch(arg){
     case '^':
@@ -483,9 +483,9 @@ int precendence(char& arg){//Add weight to the operator
 \subsection{Question 3.1}
 Use any algorithm to compute the shortest distance between every set of cities and write this information to disk with the route as a list of cities.
 \subsubsection{Answer.}
-The question ask for the shortest distance between every set of cities thus Floyd-Warshall’s algorithm which is well-known for solving to solve the All-Pairs-Shortest-Path problem is chosen. This report will try to cover key points of the algorithm as well as explain how to implement it it $\CC$. The details of Floyd-Warshall’s algorithm used for the code in this exercise is described in Graph Theory reference. \cite[]{ray2013}\\
+The question asks for the shortest distance between every set of cities thus Floyd-Warshall’s algorithm which is well-known for solving to solve the All-Pairs-Shortest-Path problem was chosen. This report only covers key points of the algorithm as well as tries to explain how to implement it it $\CC$. The details of Floyd-Warshall’s algorithm used for the code in this exercise is described in Graph Theory reference. \cite[]{ray2013}\\
 
-The input file given is very suitable for the algorithm because it is already in the form of adjacency matrix (distance matrix) which give all information about the cities and how they are connected. They are also known as nodes and edges' length in graph theory. The distance matrix $d$ is stored by 2-D vector $\lstinline{std::vector<std::vector<int>> d}$. To reconstruct the shortest path, we also need a node sequence matrix $s$ which is stored by a 2-D $\lstinline{std::vector<std::vector<int>> s}$. All the elements of node sequence matrix $s$ which means that initially the shortest path is the direct connection from citi $i$ to city $j$. The size of both vector are the square of nodes. The functions $\lstinline{lines_count}$ and $\lstinline{input2vector}$ are used to obtain the number of nodes and create the distance matrix, respectively. We are now ready to implement Floyd-Warshall’s algorithm which is done by the function $\lstinline{WFI}$. 
+The input file given is very suitable for the algorithm because it is already in the form of adjacency matrix (distance matrix) which gives all information about the cities and how they are connected. They are also known as nodes and edges' length in graph theory. The distance matrix $d$ is stored by 2-D vector $\lstinline{std::vector<std::vector<int>> d}$. To reconstruct the shortest path, we also need a node sequence matrix $s$ which is also stored by a 2-D $\lstinline{std::vector<std::vector<int>> s}$. All the elements of node sequence matrix $s$ are initially zero which means that the initial shortest path is the direct connection from citi $i$ to city $j$ for each pair $i,j$. The size of both vectors are the square of nodes. The functions $\lstinline{lines_count}$ and $\lstinline{input2vector}$ were used to obtain the number of nodes and create the distance matrix, respectively. We are now ready to implement Floyd-Warshall’s algorithm which is done by the function $\lstinline{WFI}$. 
 
 \begin{lstlisting}
 int lines_count (const std::string& fileName);
@@ -527,7 +527,7 @@ while (std::getline(fileIn , line)){
 \end{lstlisting}
 
 Floyd-Warshall's algorithm is a recursive algorithm which updates distance matrix $d$ and 
-node sequence matrix $s$ in each step. We will run a loop from the first node to the last note. For each iteration, it simply tells whether a city $k$ needs to be included for shortest in the path between city $i$ is city $j$. It will be updated in node sequence matrix $s$ as part of the shortest path and will be permanently as part of the shortest path. The algorithm behave like a greedy algorithm as it prefers more nodes and shortest path. We need the latest status of distance matrix $d$ since it stores the current shortest distance between city $i$ is city $j$. It will only be updated when the current shortest distance from is less than the distance if we include a new node $k$ in the shortest path when we compare the distance in each iteration. There is one small problem with this algorithm that it could not record multiple current shortest distance when it happens to be the equality case for the comparision of the iteration. In this case, I choose to include the one with more nodes in the the shortest paths. The implementaion of Floyd-Warshall’s algorithm is shown below:
+node sequence matrix $s$ in each iteration until it reaches the defined base case. We will run a loop from the first node to the last note. For each iteration, the algorithm simply tells whether a city $k$ needs to be included for shortest in the path between city $i$ is city $j$. It will be updated in node sequence matrix $s$ as part of the shortest path and will be permanently as part of the shortest path. The algorithm behaves like a greedy algorithm as it prefers more nodes and shortest path. We need the latest status of distance matrix $d$ since it stores the current shortest distance between city $i$ is city $j$. The matrix will only be updated when the current shortest distance from is less than the distance if we include a new node $k$ in the shortest path when we compare the distance in each iteration. There is one small problem with this algorithm that it could not record multiple current shortest distance when it happens to be the equality case for the comparision in an iteration. In this case, I choose to include the one with more nodes in the the shortest paths. The implementaion of Floyd-Warshall’s algorithm is shown below:
 \begin{lstlisting}[title = $\lstinline{WFI}$]
 	for (int k = 1; k <= nodes; k++){
         for (int i = 1; i <= nodes; i++){
@@ -548,7 +548,7 @@ node sequence matrix $s$ in each step. We will run a loop from the first node to
 		}
     }        
 \end{lstlisting}
-Reconstructing the shortest path is like going in a zig-zag in the latest node sequence matrix $s$. The element $s[i][j]$ will tell if the node $k$ is needed to be included in the shortest path. If there is a k, the recuresion will be done for $s[i][k]$ and $s[k][j]$ and it will stops when $k=0$ which is the base case. The function $\lstinline{path_recon_to_file}$ is used for path reconstruction and it is shown as below:
+Reconstructing the shortest path is like going in a zig-zag in the latest node sequence matrix $s$. The element $s[i][j]$ will tell if the node $k$ is needed to be included in the shortest path. If there is an intermidiate $k$ node, the recuresion will be done for $s[i][k]$ and $s[k][j]$ and it will stops when $k=0$ which is the base case. The function $\lstinline{path_recon_to_file}$ is used for path reconstruction and it is shown as below:
 \begin{lstlisting}[title = $\lstinline{path_recon_to_file}$]
 void path_recon_to_file(std::ofstream& fileOut1, int& n1,int& n2, 
         std::vector<std::vector<int>>& s){
@@ -578,7 +578,7 @@ for (int i = 1; i <= d.size(); i++){
 \subsection{Question 3.2}
 Implement Dijkstra's algorithm.
 \subsubsection{Answer.}
-Following the hint, we try to create a class $\lstinline{City}$ with variables $\lstinline{int distance}$ to the store best distance $\lstinline{bool visited}$ to store whether the city is visit or not and $\lstinline{int cCity}$ to store the connected city. Neccessary procedures such as get and set methods are also included. The class structure is shown as below:
+Following the hint, we try to create a class $\lstinline{City}$ with variables $\lstinline{int distance}$ to the store best distance, $\lstinline{bool visited}$ to store whether the city is visit or not and $\lstinline{int cCity}$ to store the connected city. The neccessary procedures such as get and set methods are also included and the class structure is shown as below:
 \begin{lstlisting}[title = $\lstinline{City}$]
 class City{
     int distance;//store best distance
@@ -599,7 +599,7 @@ public:
     int get_cCity();
 };
 \end{lstlisting}
-The initialization steps to set visited for all cities to false, set distance for all cities to infinite, set distance for the first city to 0 are done through the code snippets below. We also need the adjacency matrix (distance matrix) which can be done in the same way as described in Floyd-Warshall's implemetation in question 3.1.
+The initialization steps to set visited for all cities to false, set distance for all cities to infinite, set distance for the first city to 0 were done through the code snippets below. We also need the adjacency matrix (distance matrix) which can be done in the same way as described in Floyd-Warshall's implemetation in question 3.1.
 \begin{lstlisting}
 	int infinity = 1234567;//know from the input file
     //set all to infinity
@@ -615,7 +615,7 @@ The initialization steps to set visited for all cities to false, set distance fo
     city[s-1].set_visited(i_visited);
     city[s-1].set_cCity(i_cCity);
 \end{lstlisting}
-The core of Dijkstra's algorithm to find the shortest route include 4 steps: (1) Find the city with the lowest distance which has not been visited yet; (2) Mark the city as 'visited' ;(3) If the city is the endpoint, stop; (4) Update the connected cities with the distance found. They are implemented in  $\lstinline{Dijkstra}$ fucntion as described below:
+The core of Dijkstra's algorithm to find the shortest route includes 4 steps: (1) Find the city with the lowest distance which has not been visited yet; (2) Mark the city as 'visited' ;(3) If the city is the endpoint, stop; (4) Update the connected cities with the distance found. They are implemented in  $\lstinline{Dijkstra}$ fucntion as described below:\newpage
 \begin{lstlisting}[title = $\lstinline{Dijkstra}$]
 // Find shortest route, remember algorithm is from 1, vector is from 0.
     int k = s;//set k is the source point
@@ -648,7 +648,7 @@ The core of Dijkstra's algorithm to find the shortest route include 4 steps: (1)
     while (k != t);//if the city is the endpoint, stop, molding completed! 
     return city[t-1].get_distance();    
 \end{lstlisting}
-The construction of the actual route consists of 5 steps:(1) Start at the last city, (2) Look which connected cities has the lowest distance, (3) Add that one to the route, (4) Consider the city just added to be the last one, (5) Is the last city the begin city? Done!. They are implemented in  $\lstinline{path_recon_to_file}$ fucntion as described below:
+The construction of the actual route consists of 5 steps: (1) Start at the last city, (2) Look which connected cities has the lowest distance, (3) Add that one to the route, (4) Consider the city just added to be the last one, (5) Is the last city the begin city? Done!. They are implemented in  $\lstinline{path_recon_to_file}$ fucntion as described below:
 \begin{lstlisting}[title = $\lstinline{path_recon_to_file}$]
 void path_recon_to_file(std::ofstream& fileOut1, int& s, int& t, int& nodes, std::vector<City>& city){
     std::vector<int> path(nodes); 
@@ -666,7 +666,7 @@ void path_recon_to_file(std::ofstream& fileOut1, int& s, int& t, int& nodes, std
 \subsection{Question 3.3}
 The real TomTom problem.
 \subsubsection{Answer.}
-This question is out of scope of this report. An attempt using $\lstinline{std::chrono::time_point}$. was made to measure the running time of Floyd-Warshall’s algorithm and Dijkstra's algorithm  With the given input file, the time to listing shortest path for 3 to 50 cites are only $10^{-4}$ to $0.1$ second which does not suffice to comment about which algorithm is better using the codes in this report. From \cite[]{ray2013}, based on complexity analysis, Dijkstra's algorithm is faster because it has lower order of complexity. The speed of Dijkstra's algorithm can be even faster with the use of $\lstinline{heap}$ structure and precomputed data. Further study frotm this report is necessary.
+This question is beyond the scope of this report. An attempt using $\lstinline{std::chrono::time_point}$ was made to measure the run-time of Floyd-Warshall’s algorithm and Dijkstra's algorithm. However, with the given input file, the time to list the shortest path for 3, 10, 50 cites are only from $10^{-4}$ to $0.1$ seconds which does not tell much to comment about which algorithm is better using the codes in this report. Based on complexity analysis \cite[]{ray2013}, Dijkstra's algorithm is faster because it has lower order of complexity. The speed of Dijkstra's algorithm can be even faster with the use of $\lstinline{heap}$ structure and precomputed data. Further study from this report is necessary to understand more about shortest path finding algorithm.
 \bibliographystyle{jfm}
 % Note the spaces between the initials
 \bibliography{ppr}

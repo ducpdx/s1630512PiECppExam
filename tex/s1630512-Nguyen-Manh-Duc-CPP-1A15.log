@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  8 NOV 2015 05:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  8 NOV 2015 06:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -649,7 +649,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{
-                  print_primes}$ for searching prime numbers and printing ou...
+                  print_primes}$ for searching prime numbers and the last on...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -665,7 +665,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{
-                  print_primes}$ for searching prime numbers and printing ou...
+                  print_primes}$ for searching prime numbers and the last on...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -685,7 +685,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{print_primes}
-                               $ for searching prime numbers and printing ou...
+                               $ for searching prime numbers and the last on...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -697,7 +697,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{print_primes}
-                               $ for searching prime numbers and printing ou...
+                               $ for searching prime numbers and the last on...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -713,7 +713,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.148 $\lstinline{print_primes}
-                               $ for searching prime numbers and printing ou...
+                               $ for searching prime numbers and the last on...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -1547,7 +1547,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 The last five lines are and the $\lstinline{
+l.195 ...last five lines and function $\lstinline{
                                                   print_ratio}$ are listed b...
 
 If you do not understand this error, please take a closer look
@@ -1563,7 +1563,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 The last five lines are and the $\lstinline{
+l.195 ...last five lines and function $\lstinline{
                                                   print_ratio}$ are listed b...
 
 If you do not understand this error, please take a closer look
@@ -1583,7 +1583,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 ...ines are and the $\lstinline{print_ratio}
+l.195 ...nes and function $\lstinline{print_ratio}
                                                   $ are listed below:
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -1594,7 +1594,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 ...ines are and the $\lstinline{print_ratio}
+l.195 ...nes and function $\lstinline{print_ratio}
                                                   $ are listed below:
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -1609,7 +1609,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 ...ines are and the $\lstinline{print_ratio}
+l.195 ...nes and function $\lstinline{print_ratio}
                                                   $ are listed below:
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -2064,7 +2064,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...g graph. The search function $\lstinline{
+l.247 .... Hence, the search function $\lstinline{
                                                   modTestDiv}$ is faster tha...
 
 If you do not understand this error, please take a closer look
@@ -2080,7 +2080,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...g graph. The search function $\lstinline{
+l.247 .... Hence, the search function $\lstinline{
                                                   modTestDiv}$ is faster tha...
 
 If you do not understand this error, please take a closer look
@@ -2384,7 +2384,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...ing time is recored by using $\lstinline{
+l.247 ...un-time was recored by using $\lstinline{
                                                   std::chrono::time_point<st...
 
 If you do not understand this error, please take a closer look
@@ -2400,7 +2400,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...ing time is recored by using $\lstinline{
+l.247 ...un-time was recored by using $\lstinline{
                                                   std::chrono::time_point<st...
 
 If you do not understand this error, please take a closer look
@@ -2420,7 +2420,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...time is recored by using $\lstinline{std:
+l.247 ...ime was recored by using $\lstinline{std:
                                                   :chrono::time_point<std::c...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
@@ -2469,7 +2469,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.247 ...line{std::chrono::time_point<std::chrono:
-                                                  :system_clock>}$. The runn...
+                                                  :system_clock>}$. The run-...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -2481,7 +2481,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.247 ...no::time_point<std::chrono::system_clock>
-                                                  }$. The running times are ...
+                                                  }$. The run-time values ha...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -2493,7 +2493,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.247 ...o::time_point<std::chrono::system_clock>}
-                                                  $. The running times are t...
+                                                  $. The run-time values hav...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -2509,7 +2509,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.247 ...o::time_point<std::chrono::system_clock>}
-                                                  $. The running times are t...
+                                                  $. The run-time values hav...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -2524,8 +2524,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...e measured with the function $\lstinline{
-                                                  rtime_to_file}$. Code snip...
+l.247 ...e-measured with the function $\lstinline{
+                                                  rtime_to_file}$. The code ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -2540,8 +2540,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...e measured with the function $\lstinline{
-                                                  rtime_to_file}$. Code snip...
+l.247 ...e-measured with the function $\lstinline{
+                                                  rtime_to_file}$. The code ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -2561,7 +2561,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.247 ...h the function $\lstinline{rtime_to_file}
-                                                  $. Code snippets for  $\ls...
+                                                  $. The code snippets for  ...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -2573,7 +2573,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.247 ...h the function $\lstinline{rtime_to_file}
-                                                  $. Code snippets for  $\ls...
+                                                  $. The code snippets for  ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -2589,7 +2589,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.247 ...h the function $\lstinline{rtime_to_file}
-                                                  $. Code snippets for  $\ls...
+                                                  $. The code snippets for  ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -2604,7 +2604,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...o_file}$. Code snippets for  $\lstinline{
+l.247 ...le}$. The code snippets for  $\lstinline{
                                                   rtime_to_file}$ and $\lsti...
 
 If you do not understand this error, please take a closer look
@@ -2620,7 +2620,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 ...o_file}$. Code snippets for  $\lstinline{
+l.247 ...le}$. The code snippets for  $\lstinline{
                                                   rtime_to_file}$ and $\lsti...
 
 If you do not understand this error, please take a closer look
@@ -3063,7 +3063,7 @@ A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
 
 ! Text line contains an invalid character.
-l.283 ...osthenes is used for illustrating an e^^N
+l.283 ...sthenes was used for illustrating an e^^N
                                                   fficient way to search for...
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
@@ -3071,11 +3071,11 @@ Continue, and I'll forget that it ever happened.
 <rt-vs-n-eratos.png, id=254, 578.16pt x 433.62pt>
 File: rt-vs-n-eratos.png Graphic file (type png)
  <use rt-vs-n-eratos.png>
-Package pdftex.def Info: rt-vs-n-eratos.png used on input line 287.
+Package pdftex.def Info: rt-vs-n-eratos.png used on input line 286.
 (pdftex.def)             Requested size: 375.579pt x 234.74017pt.
 
 ! Text line contains an invalid character.
-l.288 \caption{^^A
+l.287 \caption{^^A
                   log-log plot of run-time against $N$}
 A funny symbol that I can't read has just been input.
 Continue, and I'll forget that it ever happened.
@@ -3087,8 +3087,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.291 ... high complexity method like $\lstinline{
-                                                  bruteForce}$ already takes...
+l.291 ...high complexity methods like $\lstinline{
+                                                  bruteForce}$ already take ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -3103,8 +3103,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.291 ... high complexity method like $\lstinline{
-                                                  bruteForce}$ already takes...
+l.291 ...high complexity methods like $\lstinline{
+                                                  bruteForce}$ already take ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -3123,8 +3123,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.291 ...exity method like $\lstinline{bruteForce}
-                                                  $ already takes the order ...
+l.291 ...xity methods like $\lstinline{bruteForce}
+                                                  $ already take the order o...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -3135,8 +3135,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.291 ...exity method like $\lstinline{bruteForce}
-                                                  $ already takes the order ...
+l.291 ...xity methods like $\lstinline{bruteForce}
+                                                  $ already take the order o...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -3151,14 +3151,19 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.291 ...exity method like $\lstinline{bruteForce}
-                                                  $ already takes the order ...
+l.291 ...xity methods like $\lstinline{bruteForce}
+                                                  $ already take the order o...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--292
+
+ []
 
 [6 <./rt-vs-n-eratos.png>]
 
@@ -3403,7 +3408,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.318 ... arithmethic operation while $\lstinline{
+l.318 ...arithmethic operations while $\lstinline{
                                                   parserPostFix}$ and $\lsti...
 
 If you do not understand this error, please take a closer look
@@ -3419,7 +3424,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.318 ... arithmethic operation while $\lstinline{
+l.318 ...arithmethic operations while $\lstinline{
                                                   parserPostFix}$ and $\lsti...
 
 If you do not understand this error, please take a closer look
@@ -3439,7 +3444,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.318 ...peration while $\lstinline{parserPostFix}
+l.318 ...erations while $\lstinline{parserPostFix}
                                                   $ and $\lstinline{getFSMCo...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
@@ -3451,7 +3456,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.318 ...peration while $\lstinline{parserPostFix}
+l.318 ...erations while $\lstinline{parserPostFix}
                                                   $ and $\lstinline{getFSMCo...
 
 If you do not understand this error, please take a closer look
@@ -3467,7 +3472,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.318 ...peration while $\lstinline{parserPostFix}
+l.318 ...erations while $\lstinline{parserPostFix}
                                                   $ and $\lstinline{getFSMCo...
 
 If you do not understand this error, please take a closer look
@@ -3600,7 +3605,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...We also need $\lstinline{bool isoperator(
-                                                  char arg)}$ while scanning...
+                                                  char arg)}$ to recognize o...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -3612,7 +3617,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...eed $\lstinline{bool isoperator(char arg)
-                                                  }$ while scanning through ...
+                                                  }$ to recognize operators ...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -3624,7 +3629,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...ed $\lstinline{bool isoperator(char arg)}
-                                                  $ while scanning through a...
+                                                  $ to recognize operators w...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -3640,7 +3645,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...ed $\lstinline{bool isoperator(char arg)}
-                                                  $ while scanning through a...
+                                                  $ to recognize operators w...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -3656,7 +3661,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...se a $\CC$ built-in function $\lstinline{
-                                                  bool isdigit}$.
+                                                  bool isdigit}$. The code u...
+
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
@@ -3671,7 +3677,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...se a $\CC$ built-in function $\lstinline{
-                                                  bool isdigit}$.
+                                                  bool isdigit}$. The code u...
+
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
@@ -3690,7 +3697,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...ilt-in function $\lstinline{bool isdigit}
-                                                  $.
+                                                  $. The code use the symbol...
+
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
 
@@ -3701,7 +3709,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...ilt-in function $\lstinline{bool isdigit}
-                                                  $.
+                                                  $. The code use the symbol...
+
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
@@ -3716,7 +3725,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.318 ...ilt-in function $\lstinline{bool isdigit}
-                                                  $.
+                                                  $. The code use the symbol...
+
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
@@ -4012,7 +4022,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.326 Parsing function $\lstinline{
-                                   parserPostFix}$ is done by using a Finite...
+                                   parserPostFix}$ was done by using a Finit...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4028,7 +4038,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.326 Parsing function $\lstinline{
-                                   parserPostFix}$ is done by using a Finite...
+                                   parserPostFix}$ was done by using a Finit...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4048,7 +4058,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.326 Parsing function $\lstinline{parserPostFix}
-                                                 $ is done by using a Finite...
+                                                 $ was done by using a Finit...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -4060,7 +4070,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.326 Parsing function $\lstinline{parserPostFix}
-                                                 $ is done by using a Finite...
+                                                 $ was done by using a Finit...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4076,7 +4086,87 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.326 Parsing function $\lstinline{parserPostFix}
-                                                 $ is done by using a Finite...
+                                                 $ was done by using a Finit...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 ...hose strings to integer with $\lstinline{
+                                                  c_str}$ before implement i...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 ...hose strings to integer with $\lstinline{
+                                                  c_str}$ before implement i...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 32
+6.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 ...trings to integer with $\lstinline{c_str}
+                                                  $ before implement its alg...
+
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 ...trings to integer with $\lstinline{c_str}
+                                                  $ before implement its alg...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 ...trings to integer with $\lstinline{c_str}
+                                                  $ before implement its alg...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4469,7 +4559,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.354 ... \linebreak  $\lstinline{std::vector<std:
-                                                  :string>postfix}$ with ele...
+                                                  :string>postfix}$ with eac...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -4481,7 +4571,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.354 ...eak  $\lstinline{std::vector<std::string>
-                                                  postfix}$ with elements co...
+                                                  postfix}$ with each elemen...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -4493,7 +4583,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.354 ...stinline{std::vector<std::string>postfix}
-                                                  $ with elements correspond...
+                                                  $ with each element corres...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -4505,7 +4595,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.354 ...stinline{std::vector<std::string>postfix}
-                                                  $ with elements correspond...
+                                                  $ with each element corres...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4521,7 +4611,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.354 ...stinline{std::vector<std::string>postfix}
-                                                  $ with elements correspond...
+                                                  $ with each element corres...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4748,8 +4838,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 ...ing. Errors are defined from $\lstinline{
-                                                  ROPN}$ function. Everytime...
+l.369 ...ng. Errors were defined from $\lstinline{
+                                                  RPN}$ function. Everytime ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4764,8 +4854,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 ...ing. Errors are defined from $\lstinline{
-                                                  ROPN}$ function. Everytime...
+l.369 ...ng. Errors were defined from $\lstinline{
+                                                  RPN}$ function. Everytime ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4784,7 +4874,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 ...Errors are defined from $\lstinline{ROPN}
+l.369 ...Errors were defined from $\lstinline{RPN}
                                                   $ function. Everytime an e...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
@@ -4796,7 +4886,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 ...Errors are defined from $\lstinline{ROPN}
+l.369 ...Errors were defined from $\lstinline{RPN}
                                                   $ function. Everytime an e...
 
 If you do not understand this error, please take a closer look
@@ -4812,7 +4902,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 ...Errors are defined from $\lstinline{ROPN}
+l.369 ...Errors were defined from $\lstinline{RPN}
                                                   $ function. Everytime an e...
 
 If you do not understand this error, please take a closer look
@@ -4828,7 +4918,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 ...en, there will be a throw of $\lstinline{
+l.369 ...ns, there will be a throw of $\lstinline{
                                                   std::runtime_error}$ which...
 
 If you do not understand this error, please take a closer look
@@ -4844,7 +4934,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 ...en, there will be a throw of $\lstinline{
+l.369 ...ns, there will be a throw of $\lstinline{
                                                   std::runtime_error}$ which...
 
 If you do not understand this error, please take a closer look
@@ -4921,7 +5011,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.369 ...tched in main fucntion using $\lstinline{
-                                                  e.what()}r$ . The list of ...
+                                                  e.what()}$ . The list of e...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4937,7 +5027,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.369 ...tched in main fucntion using $\lstinline{
-                                                  e.what()}r$ . The list of ...
+                                                  e.what()}$ . The list of e...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4957,7 +5047,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.369 ...hed in main fucntion using $\lstinline{e.
-                                                  what()}r$ . The list of er...
+                                                  what()}$ . The list of err...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -4969,7 +5059,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.369 ...n main fucntion using $\lstinline{e.what(
-                                                  )}r$ . The list of errors ...
+                                                  )}$ . The list of errors a...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -4981,7 +5071,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.369 ...main fucntion using $\lstinline{e.what()}
-                                                  r$ . The list of errors ar...
+                                                  $ . The list of errors are...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -4997,7 +5087,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.369 ...main fucntion using $\lstinline{e.what()}
-                                                  r$ . The list of errors ar...
+                                                  $ . The list of errors are...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -5088,66 +5178,6 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.375 \begin{lstlisting}
-                        
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.379 \end{lstlisting}
-                      
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.379 \end{lstlisting}
-                      
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.380 \begin{lstlisting}
-                        
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.380 \begin{lstlisting}
                         
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -5163,6 +5193,66 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
+l.379 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.379 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.380 \begin{lstlisting}
+                        
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.380 \begin{lstlisting}
+                        
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
 l.384 \end{lstlisting}
                       
 If you do not understand this error, please take a closer look
@@ -5186,20 +5276,41 @@ section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+LaTeX Warning: Command \^ invalid in math mode on input line 386.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.386 ...he power operator using the symbol $\^{ }
+                                                  $
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
 ! Missing { inserted.
 <to be read again> 
-                   $
-l.386 ...r the power operator using the symbol $^$
-                                                  
+                   \egroup 
+l.386 ...he power operator using the symbol $\^{ }
+                                                  $
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
 so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.386 ...he power operator using the symbol $\^{ }
+                                                  $
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
 ! Missing } inserted.
 <inserted text> 
                 }
-l.386 ...r the power operator using the symbol $^$
+l.386 ...e power operator using the symbol $\^{ }$
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -5207,27 +5318,50 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+Missing character: There is no è in font cmex10!
+
+LaTeX Warning: Command \^ invalid in math mode on input line 388.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.388 ...he power operator using the symbol $\^{ }
+                                                  $  we only need to add a c...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
 ! Missing { inserted.
 <to be read again> 
-                   $
-l.388 ...r the power operator using the symbol $^$
-                                                   we only need to add a cas...
+                   \egroup 
+l.388 ...he power operator using the symbol $\^{ }
+                                                  $  we only need to add a c...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
 so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.388 ...he power operator using the symbol $\^{ }
+                                                  $  we only need to add a c...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
 ! Missing } inserted.
 <inserted text> 
                 }
-l.388 ...r the power operator using the symbol $^$
-                                                   we only need to add a cas...
+l.388 ...e power operator using the symbol $\^{ }$
+                                                    we only need to add a ca...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+Missing character: There is no è in font cmex10!
 
 ! Package caption Error: white undefined.
 
@@ -5296,27 +5430,49 @@ section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+
+LaTeX Warning: Command \^ invalid in math mode on input line 388.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.388 ...switch}$ and a check of the symbol $\^{ }
+                                                  $  in $\lstinline{bool iso...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
 ! Missing { inserted.
 <to be read again> 
-                   $
-l.388 ...ne{switch}$ and a check of the symbol $^$
-                                                   in $\lstinline{bool isope...
+                   \egroup 
+l.388 ...switch}$ and a check of the symbol $\^{ }
+                                                  $  in $\lstinline{bool iso...
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
 so that I will find a matching right brace soon.
 (If you're confused by all this, try typing `I}' now.)
 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.388 ...switch}$ and a check of the symbol $\^{ }
+                                                  $  in $\lstinline{bool iso...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
 ! Missing } inserted.
 <inserted text> 
                 }
-l.388 ...ne{switch}$ and a check of the symbol $^$
-                                                   in $\lstinline{bool isope...
+l.388 ...witch}$ and a check of the symbol $\^{ }$
+                                                    in $\lstinline{bool isop...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+Missing character: There is no è in font cmex10!
 
 ! Package caption Error: white undefined.
 
@@ -5324,7 +5480,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.388 ...a check of the symbol $^$ in $\lstinline{
+l.388 ...ck of the symbol $\^{ }$  in $\lstinline{
                                                   bool isoperator(char arg)}$.
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -5339,7 +5495,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.388 ...a check of the symbol $^$ in $\lstinline{
+l.388 ...ck of the symbol $\^{ }$  in $\lstinline{
                                                   bool isoperator(char arg)}$.
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -5358,7 +5514,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.388 ...ymbol $^$ in $\lstinline{bool isoperator(
+l.388 ... $\^{ }$  in $\lstinline{bool isoperator(
                                                   char arg)}$.
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -5783,7 +5939,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.410 ...tep, fucntion $\lstinline{infixToPostfix}
-                                                  $ were built. Another func...
+                                                  $ were built. We also need...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -5795,7 +5951,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.410 ...tep, fucntion $\lstinline{infixToPostfix}
-                                                  $ were built. Another func...
+                                                  $ were built. We also need...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -5811,7 +5967,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.410 ...tep, fucntion $\lstinline{infixToPostfix}
-                                                  $ were built. Another func...
+                                                  $ were built. We also need...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -5826,7 +5982,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.410 ...were built. Another function $\lstinline{
+l.410 ...built. We also need function $\lstinline{
                                                   precendence}$ to determine...
 
 If you do not understand this error, please take a closer look
@@ -5842,7 +5998,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.410 ...were built. Another function $\lstinline{
+l.410 ...built. We also need function $\lstinline{
                                                   precendence}$ to determine...
 
 If you do not understand this error, please take a closer look
@@ -5862,7 +6018,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.410 ...Another function $\lstinline{precendence}
+l.410 ...so need function $\lstinline{precendence}
                                                   $ to determine an order fo...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
@@ -5874,7 +6030,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.410 ...Another function $\lstinline{precendence}
+l.410 ...so need function $\lstinline{precendence}
                                                   $ to determine an order fo...
 
 If you do not understand this error, please take a closer look
@@ -5890,7 +6046,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.410 ...Another function $\lstinline{precendence}
+l.410 ...so need function $\lstinline{precendence}
                                                   $ to determine an order fo...
 
 If you do not understand this error, please take a closer look
@@ -5967,8 +6123,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 The $\lstinline{
-                      precendence}$ is simply to assign value to operator ch...
+l.420 Function $\lstinline{
+                           precendence}$ is simply assign values to operator...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -5983,8 +6139,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 The $\lstinline{
-                      precendence}$ is simply to assign value to operator ch...
+l.420 Function $\lstinline{
+                           precendence}$ is simply assign values to operator...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6003,8 +6159,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 The $\lstinline{precendence}
-                                  $ is simply to assign value to operator ch...
+l.420 Function $\lstinline{precendence}
+                                       $ is simply assign values to operator...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -6015,8 +6171,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 The $\lstinline{precendence}
-                                  $ is simply to assign value to operator ch...
+l.420 Function $\lstinline{precendence}
+                                       $ is simply assign values to operator...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6031,24 +6187,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 The $\lstinline{precendence}
-                                  $ is simply to assign value to operator ch...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ... following BODMAS rule using $\lstinline{
-                                                  switch}$ . Note that brack...
+l.420 Function $\lstinline{precendence}
+                                       $ is simply assign values to operator...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6064,7 +6204,23 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.420 ... following BODMAS rule using $\lstinline{
-                                                  switch}$ . Note that brack...
+                                                  switch}$. Note that bracke...
+
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.420 ... following BODMAS rule using $\lstinline{
+                                                  switch}$. Note that bracke...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6084,7 +6240,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.420 ...ing BODMAS rule using $\lstinline{switch}
-                                                  $ . Note that brackets wer...
+                                                  $. Note that brackets were...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6100,7 +6256,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.420 ...ing BODMAS rule using $\lstinline{switch}
-                                                  $ . Note that brackets wer...
+                                                  $. Note that brackets were...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6116,7 +6272,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.420 ...l be processed seperately in $\lstinline{
-                                                  infixToPostfix}$. The func...
+                                                  infixToPostfix}$. Function...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6132,7 +6288,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.420 ...l be processed seperately in $\lstinline{
-                                                  infixToPostfix}$. The func...
+                                                  infixToPostfix}$. Function...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6152,7 +6308,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.420 ...seperately in $\lstinline{infixToPostfix}
-                                                  $. The function $\lstinlin...
+                                                  $. Function $\lstinline{in...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -6164,7 +6320,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.420 ...seperately in $\lstinline{infixToPostfix}
-                                                  $. The function $\lstinlin...
+                                                  $. Function $\lstinline{in...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6180,7 +6336,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.420 ...seperately in $\lstinline{infixToPostfix}
-                                                  $. The function $\lstinlin...
+                                                  $. Function $\lstinline{in...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6195,8 +6351,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 ...fixToPostfix}$. The function $\lstinline{
-                                                  infixToPostfix}$ also serv...
+l.420 ...e{infixToPostfix}$. Function $\lstinline{
+                                                  infixToPostfix}$ serves as...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6211,88 +6367,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 ...fixToPostfix}$. The function $\lstinline{
-                                                  infixToPostfix}$ also serv...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 42
-0.
-
-
-! LaTeX Error: Command \ttfamily invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ... The function $\lstinline{infixToPostfix}
-                                                  $ also serves as another e...
-
-Please use the math alphabet \mathtt instead of the \ttfamily command. 
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ... The function $\lstinline{infixToPostfix}
-                                                  $ also serves as another e...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ... The function $\lstinline{infixToPostfix}
-                                                  $ also serves as another e...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ...mbalance breackets. Fucntion $\lstinline{
-                                                  precendence}$ and code sni...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ...mbalance breackets. Fucntion $\lstinline{
-                                                  precendence}$ and code sni...
+l.420 ...e{infixToPostfix}$. Function $\lstinline{
+                                                  infixToPostfix}$ serves as...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6311,8 +6387,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 ...ackets. Fucntion $\lstinline{precendence}
-                                                  $ and code snippets of $\l...
+l.420 ...x}$. Function $\lstinline{infixToPostfix}
+                                                  $ serves as another error ...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -6323,8 +6399,8 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 ...ackets. Fucntion $\lstinline{precendence}
-                                                  $ and code snippets of $\l...
+l.420 ...x}$. Function $\lstinline{infixToPostfix}
+                                                  $ serves as another error ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -6339,86 +6415,9 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.420 ...ackets. Fucntion $\lstinline{precendence}
-                                                  $ and code snippets of $\l...
+l.420 ...x}$. Function $\lstinline{infixToPostfix}
+                                                  $ serves as another error ...
 
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ...dence}$ and code snippets of $\lstinline{
-                                                  infixToPostfix}$ are liste...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ...dence}$ and code snippets of $\lstinline{
-                                                  infixToPostfix}$ are liste...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 42
-0.
-
-
-! LaTeX Error: Command \ttfamily invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ...e snippets of $\lstinline{infixToPostfix}
-                                                  $ are listed below:
-Please use the math alphabet \mathtt instead of the \ttfamily command. 
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ...e snippets of $\lstinline{infixToPostfix}
-                                                  $ are listed below:
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.420 ...e snippets of $\lstinline{infixToPostfix}
-                                                  $ are listed below:
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
@@ -6739,6 +6738,7 @@ section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[11]
 
 ! Package caption Error: white undefined.
 
@@ -6791,7 +6791,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[11]
 ! Undefined control sequence.
 \lst@um'@ ->\lst@ifupquote \textquotesingle 
                                             \else \char 39\relax \fi 
@@ -6959,6 +6958,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
 
+[12]
 
 ! Package caption Error: white undefined.
 
@@ -7094,7 +7094,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.488 ...$s$ which is stored by a 2-D $\lstinline{
+l.488 ...hich is also stored by a 2-D $\lstinline{
                                                   std::vector<std::vector<in...
 
 If you do not understand this error, please take a closer look
@@ -7110,7 +7110,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.488 ...$s$ which is stored by a 2-D $\lstinline{
+l.488 ...hich is also stored by a 2-D $\lstinline{
                                                   std::vector<std::vector<in...
 
 If you do not understand this error, please take a closer look
@@ -7130,7 +7130,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.488 ...which is stored by a 2-D $\lstinline{std:
+l.488 ... is also stored by a 2-D $\lstinline{std:
                                                   :vector<std::vector<int>> ...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
@@ -7303,7 +7303,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.488 ...\lstinline{lines_count}$ and $\lstinline{
-                                                  input2vector}$ are used to...
+                                                  input2vector}$ were used t...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -7319,7 +7319,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.488 ...\lstinline{lines_count}$ and $\lstinline{
-                                                  input2vector}$ are used to...
+                                                  input2vector}$ were used t...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -7339,7 +7339,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.488 ...nes_count}$ and $\lstinline{input2vector}
-                                                  $ are used to obtain the n...
+                                                  $ were used to obtain the ...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -7351,7 +7351,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.488 ...nes_count}$ and $\lstinline{input2vector}
-                                                  $ are used to obtain the n...
+                                                  $ were used to obtain the ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -7367,7 +7367,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.488 ...nes_count}$ and $\lstinline{input2vector}
-                                                  $ are used to obtain the n...
+                                                  $ were used to obtain the ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -7453,7 +7453,6 @@ section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[12]
 
 ! Package caption Error: white undefined.
 
@@ -8187,38 +8186,38 @@ section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 ...title = $\lstinline{path_recon_to_file}$]
-                                                  
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.552 ...title = $\lstinline{path_recon_to_file}$]
-                                                  
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [14]
 
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.552 ...title = $\lstinline{path_recon_to_file}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.552 ...title = $\lstinline{path_recon_to_file}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 55
 2.
 
@@ -8719,7 +8718,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.581 ...$ to the store best distance $\lstinline{
+l.581 ... to the store best distance, $\lstinline{
                                                   bool visited}$ to store wh...
 
 If you do not understand this error, please take a closer look
@@ -8735,7 +8734,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.581 ...$ to the store best distance $\lstinline{
+l.581 ... to the store best distance, $\lstinline{
                                                   bool visited}$ to store wh...
 
 If you do not understand this error, please take a closer look
@@ -8755,7 +8754,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.581 ...e best distance $\lstinline{bool visited}
+l.581 ... best distance, $\lstinline{bool visited}
                                                   $ to store whether the cit...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
@@ -8767,7 +8766,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.581 ...e best distance $\lstinline{bool visited}
+l.581 ... best distance, $\lstinline{bool visited}
                                                   $ to store whether the cit...
 
 If you do not understand this error, please take a closer look
@@ -8783,7 +8782,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.581 ...e best distance $\lstinline{bool visited}
+l.581 ... best distance, $\lstinline{bool visited}
                                                   $ to store whether the cit...
 
 If you do not understand this error, please take a closer look
@@ -8900,93 +8899,93 @@ If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
 section about errors.
 Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 58
-2.
-
-
-! LaTeX Error: Command \ttfamily invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.582 ...n{lstlisting}[title = $\lstinline{City}$]
-                                                  
-Please use the math alphabet \mathtt instead of the \ttfamily command. 
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.582 ...n{lstlisting}[title = $\lstinline{City}$]
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\@ifundefined ...dafter \ifx \csname #1\endcsname 
-                                                  \relax \expandafter \@firs...
-l.582 ...n{lstlisting}[title = $\lstinline{City}$]
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-
-! LaTeX Error: Undefined color `\color {listinggray}'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.582 ...n{lstlisting}[title = $\lstinline{City}$]
-                                                  
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 58
-2.
-
-
-! LaTeX Error: Command \ttfamily invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.582 ...n{lstlisting}[title = $\lstinline{City}$]
-                                                  
-Please use the math alphabet \mathtt instead of the \ttfamily command. 
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.582 ...n{lstlisting}[title = $\lstinline{City}$]
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\@ifundefined ...dafter \ifx \csname #1\endcsname 
-                                                  \relax \expandafter \@firs...
-l.582 ...n{lstlisting}[title = $\lstinline{City}$]
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-
-! LaTeX Error: Undefined color `\color {listinggray}'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.582 ...n{lstlisting}[title = $\lstinline{City}$]
-                                                  
-You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [15]
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 58
+2.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...n{lstlisting}[title = $\lstinline{City}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.582 ...n{lstlisting}[title = $\lstinline{City}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.582 ...n{lstlisting}[title = $\lstinline{City}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...n{lstlisting}[title = $\lstinline{City}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 58
+2.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...n{lstlisting}[title = $\lstinline{City}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.582 ...n{lstlisting}[title = $\lstinline{City}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.582 ...n{lstlisting}[title = $\lstinline{City}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...n{lstlisting}[title = $\lstinline{City}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 ! Package caption Error: white undefined.
 
@@ -9217,121 +9216,121 @@ section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 61
-9.
-
-
-! LaTeX Error: Command \ttfamily invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-Please use the math alphabet \mathtt instead of the \ttfamily command. 
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\@ifundefined ...dafter \ifx \csname #1\endcsname 
-                                                  \relax \expandafter \@firs...
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-
-! LaTeX Error: Undefined color `\color {listinggray}'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 61
-9.
-
-
-! LaTeX Error: Command \ttfamily invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-Please use the math alphabet \mathtt instead of the \ttfamily command. 
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\@ifundefined ...dafter \ifx \csname #1\endcsname 
-                                                  \relax \expandafter \@firs...
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-I'm ignoring this, since I wasn't doing a \csname.
-
-
-! LaTeX Error: Undefined color `\color {listinggray}'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
-                                                  
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [16]
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 61
+9.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 61
+9.
+
+
+! LaTeX Error: Command \ttfamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+Please use the math alphabet \mathtt instead of the \ttfamily command. 
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\@ifundefined ...dafter \ifx \csname #1\endcsname 
+                                                  \relax \expandafter \@firs...
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+! LaTeX Error: Undefined color `\color {listinggray}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.619 ...tlisting}[title = $\lstinline{Dijkstra}$]
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 ! Package caption Error: white undefined.
 
@@ -9556,36 +9555,6 @@ l.652 ...title = $\lstinline{path_recon_to_file}$]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.665 \end{lstlisting}
-                      
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package caption Error: white undefined.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.665 \end{lstlisting}
-                      
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [17]
 
 ! Package caption Error: white undefined.
@@ -9594,8 +9563,38 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
+l.665 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.665 \end{lstlisting}
+                      
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package caption Error: white undefined.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
 l.669 ...his report. An attempt using $\lstinline{
-                                                  std::chrono::time_point}$....
+                                                  std::chrono::time_point}$ ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -9611,7 +9610,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.669 ...his report. An attempt using $\lstinline{
-                                                  std::chrono::time_point}$....
+                                                  std::chrono::time_point}$ ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -9631,7 +9630,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.669 ...report. An attempt using $\lstinline{std:
-                                                  :chrono::time_point}$. was...
+                                                  :chrono::time_point}$ was ...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -9643,7 +9642,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.669 ...An attempt using $\lstinline{std::chrono:
-                                                  :time_point}$. was made to...
+                                                  :time_point}$ was made to ...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -9655,7 +9654,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.669 ...sing $\lstinline{std::chrono::time_point}
-                                                  $. was made to measure the...
+                                                  $ was made to measure the ...
 
 Please use the math alphabet \mathtt instead of the \ttfamily command. 
 
@@ -9667,7 +9666,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.669 ...sing $\lstinline{std::chrono::time_point}
-                                                  $. was made to measure the...
+                                                  $ was made to measure the ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -9683,7 +9682,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.669 ...sing $\lstinline{std::chrono::time_point}
-                                                  $. was made to measure the...
+                                                  $ was made to measure the ...
 
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -9789,12 +9788,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 673.
  ) 
 Here is how much of TeX's memory you used:
  10300 strings out of 494501
- 152067 string characters out of 6167030
- 321889 words of memory out of 5000000
+ 152069 string characters out of 6167030
+ 327889 words of memory out of 5000000
  13001 multiletter control sequences out of 15000+600000
  19756 words of font info for 73 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 40i,15n,67p,1226b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,15n,67p,1251b,1088s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
 0.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/
@@ -9813,11 +9812,11 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015bas
 ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015
 basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on s1630512-Nguyen-Manh-Duc-CPP-1A15.pdf (18 pages, 337604 bytes
+Output written on s1630512-Nguyen-Manh-Duc-CPP-1A15.pdf (18 pages, 336591 bytes
 ).
 PDF statistics:
- 792 PDF objects out of 1000 (max. 8388607)
- 743 compressed objects within 8 object streams
+ 791 PDF objects out of 1000 (max. 8388607)
+ 742 compressed objects within 8 object streams
  436 named destinations out of 1000 (max. 500000)
  259 words of extra memory for PDF output out of 10000 (max. 10000000)
 
