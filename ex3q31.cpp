@@ -19,7 +19,7 @@ int lines_count (const std::string& fileName);
 std::vector<std::vector<int>> input2vector (const std::string& fileName);
 void WFI(int &nodes, std::vector<std::vector<int>>& d, 
         std::vector<std::vector<int>>& s);
-void path_recon(std::ofstream& fileOut1, int& n1,int& n2, std::vector<std::vector<int>>& s);
+void path_recon_to_file(std::ofstream& fileOut1, int& n1,int& n2, std::vector<std::vector<int>>& s);
 
 int main()
 {  
@@ -47,13 +47,15 @@ int main()
         fileOut2 << std::fixed << std::setprecision(0)<< fileName[i] << "\t";//fix precision
         fileOut2 << std::fixed << std::setprecision(14)<<elapsed_seconds.count(); 
         fileOut2 << std::endl;
-        std::cout << "elapsed time to find shortest route for " << fileName[i] << " is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
+        std::cout << "elapsed time to find shortest route with WFI for " << fileName[i] << " is: " << std::fixed << std::setprecision(14)<<elapsed_seconds.count() << " seconds" << std::endl;
         for (int i = 1; i <= d.size(); i++){
             for (int j = i+1; j <= d[i].size(); j++){
+                //i,j is correspond to algorithm so start from 1
+                //j will start from i+1 because we move to other cities
                 fileOut1 << i;
-                path_recon(fileOut1,i,j,s);
+                path_recon_to_file(fileOut1,i,j,s);//path reconstruction  
                 fileOut1 << " - " <<j; 
-                fileOut1 << "\t\t" << d[i-1][j-1];
+                fileOut1 << "\t\t" << d[i-1][j-1];// print distance
                 fileOut1 << std::endl;
             }           
         }
@@ -112,13 +114,13 @@ void WFI(int &nodes, std::vector<std::vector<int>>& d,
     }    
 }
 
-void path_recon(std::ofstream& fileOut1, int& n1,int& n2, 
+void path_recon_to_file(std::ofstream& fileOut1, int& n1,int& n2, 
         std::vector<std::vector<int>>& s){
     int k;
     k = s[n1-1][n2-1];//start and destination, remember to -1 in the index
     if (k != 0){
-        path_recon(fileOut1,n1,k,s);//recursive
+        path_recon_to_file(fileOut1,n1,k,s);//recursive
         fileOut1 << " - "<< k;//add - to separate new nodes
-        path_recon(fileOut1,k,n2,s);//recursive
+        path_recon_to_file(fileOut1,k,n2,s);//recursive
     }
 }    

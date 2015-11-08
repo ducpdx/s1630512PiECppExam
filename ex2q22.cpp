@@ -34,14 +34,21 @@ std::array <std::array<int,5>, 5> stateTable=
 double RPN (const std::vector<std::string>& expr);
 std::vector<std::string> parserPostFix(std::string& postfix);
 int getFSMCol(char& currentChar);
+std::vector<std::string> inputToPostfix (const std::string& fileName);
 
 int main(){    
-    std::string postfix;
-    std::cout<<"Enter a postfix expression:"<<std::endl;
-    std::getline(std::cin,postfix);
-    std::vector<std::string> expr = parserPostFix(postfix);      
-    std::cout << std::endl <<"Output:" << std::endl;
-    std::cout<<postfix<<" = "<< RPN(expr) << std::endl;      
+    std::string fileName ="postfix.data";
+    std::vector<std::string> postfixFromFile = inputToPostfix(fileName);
+    std::cout<< std::endl <<"Getting postfix expression from input file...";
+    for (int i = 0; i < postfixFromFile.size(); i++){
+        std::cout  << std::endl << postfixFromFile[i];
+    }
+
+    std::cout<< std::endl <<"Output:" << std::endl;
+    for (int i = 0; i < postfixFromFile.size(); i++){
+        std::vector<std::string>exprFromFile = parserPostFix(postfixFromFile[i]);      
+        std::cout << postfixFromFile[i] << " = " << RPN(exprFromFile) << std::endl;
+    }
 }
     
 
@@ -146,4 +153,14 @@ int getFSMCol(char& currentChar){
         //avoid void return warning, this wont happen thanks to error checking 
         return -1;
     }
+}
+
+std::vector<std::string> inputToPostfix (const std::string& fileName){
+    std::vector<std::string> postfix;
+    std::ifstream fileIn(fileName);
+    std::string line;
+    while (std::getline(fileIn , line)){
+        postfix.push_back(line);
+    }
+    return postfix;
 }

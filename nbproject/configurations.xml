@@ -12,7 +12,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>ex3q31.cpp</itemPath>
+      <itemPath>ex2q22.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -39,7 +39,7 @@
           <standard>8</standard>
         </ccTool>
       </compileType>
-      <item path="ex3q31.cpp" ex="false" tool="1" flavor2="0">
+      <item path="ex2q22.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -62,7 +62,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="ex3q31.cpp" ex="false" tool="1" flavor2="0">
+      <item path="ex2q22.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

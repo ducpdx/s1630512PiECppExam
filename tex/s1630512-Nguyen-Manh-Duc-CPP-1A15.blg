@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: s1630512-Nguyen-Manh-Duc-CPP-1A15.aux
 The style file: jfm.bst
 Database file #1: ppr.bib
-You've used 1 entry,
+You've used 2 entries,
             2793 wiz_defined-function locations,
-            628 strings with 4764 characters,
-and the built_in function-call counts, 365 in all, are:
-= -- 31
-> -- 10
-< -- 1
-+ -- 4
-- -- 3
-* -- 24
-:= -- 71
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 5
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 18
-empty$ -- 35
-format.name$ -- 4
-if$ -- 73
+            632 strings with 4834 characters,
+and the built_in function-call counts, 707 in all, are:
+= -- 62
+> -- 20
+< -- 2
++ -- 8
+- -- 6
+* -- 46
+:= -- 134
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 10
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 36
+empty$ -- 69
+format.name$ -- 8
+if$ -- 145
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 2
-newline$ -- 7
-num.names$ -- 4
-pop$ -- 8
+missing$ -- 4
+newline$ -- 10
+num.names$ -- 8
+pop$ -- 16
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 10
 quote$ -- 0
-skip$ -- 16
+skip$ -- 31
 stack$ -- 0
-substring$ -- 11
-swap$ -- 3
+substring$ -- 22
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 12
 warning$ -- 0
-while$ -- 3
+while$ -- 6
 width$ -- 0
-write$ -- 13
+write$ -- 23
