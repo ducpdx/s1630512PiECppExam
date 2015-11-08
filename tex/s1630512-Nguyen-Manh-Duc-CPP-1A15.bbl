@@ -1,5 +1,9 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[KUSHWAHA \& MISRA(2014)]{kushwaha2014}
+{\sc KUSHWAHA, D.S. \& MISRA, A.K.} 2014 {\em Data Structures: a Programming
+  Approach with C\/}. PHI Learning.
 
 \bibitem[Ray(2013)]{ray2013}
 {\sc Ray, Santanu~Saha} 2013 {\em {Graph Theory with Algorithms and Its

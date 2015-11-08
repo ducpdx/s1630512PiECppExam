@@ -222,7 +222,7 @@ double RPN (const std::vector<std::string>& expr){
             }
         }
     }
-    if (s.size() != 1){
+    if (s.size() != 1){//error checking based on RPN eval stack
         throw std::runtime_error("Invalid Input");
     }
     if(!s.empty()){

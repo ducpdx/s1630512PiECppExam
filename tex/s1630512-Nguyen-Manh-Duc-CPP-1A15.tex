@@ -127,12 +127,12 @@ backgroundcolor=\color{lbcolor},
 \predate{\begin{center}\itshape}
 \postdate{\end{center}\\}
 \setlength{\droptitle}{-1.25 in}
-\lhead{PiE $\CC$ Final Assignment}
+\lhead{PiE $\CC$ Final Assignment Report}
 \rhead{Duc Nguyen \quad \thepage\ / \pageref{LastPage}}
-\title{PiE $\CC$ Final Assignment}
+\title{PiE $\CC$ Final Assignment Report}
 %\date{\vspace{-5ex}}
 \author{Name: Duc Nguyen, \\student number: s1630512\thanks{Email address for 
-correspondence: nguyenmanhduc@student.utwente.nl or ngmaduc@gmail.com}}
+correspondence: nguyenmanhduc@student.utwente.nl or ngmaduc@gmail.com.    The codes were composed by and tested with NetBeans IDE 8.0.2 in Mac OSX Yosemite 10.10.5.}}
 
 \begin{document}
 \clearpage\maketitle
@@ -315,11 +315,12 @@ correctly and output the result to the screen.
 Your Reverse Polish Notation calculator should be able to do add, subtract, multiply and
 divide integers.
 \subsubsection{Answer.}
-Three functions are used to build an RPN for integers: $\lstinline{RPN}$ is used for performing arithmethic operation while $\lstinline{parserPostFix}$ and $\lstinline{getFSMCol}$ are used to deal with multi-digit and negative integers.
+Four functions are built for an RPN evaluator for integers: $\lstinline{RPN}$ is used for performing arithmethic operation while $\lstinline{parserPostFix}$ and $\lstinline{getFSMCol}$ are used to deal with multi-digit and negative integers. We also need $\lstinline{bool isoperator(char arg)}$ while scanning through a RPn expression. To check for a digit we can use a $\CC$ built-in function $\lstinline{bool isdigit}$.
 \begin{lstlisting}
 double RPN (const std::vector<std::string>& expr);
 std::vector<std::string> parserPostFix(std::string& postfix);
 int getFSMCol(char& currentChar);
+bool isoperator(char arg);
 \end{lstlisting}
 The main idea is to parse $\lstinline{std::string& postfix}$ to a $\lstinline{std::vector<std::string>}$ then perform RPN evaluator. The algorithm for RPN evaluator used in this code is described in programming reference \cite[]{roberts2013}.
 Parsing function $\lstinline{parserPostFix}$ is done by using a Finite State Machine (listed below) to keep track of keyboard strokes.  It will recognize the consecutive keystrokes to combine keystrokes as multi-digit or negavtive numbers then store to vector elements as a string. RPN evaluator will then convert those string to integer before implement its algorithm. 
@@ -362,6 +363,122 @@ std::vector<std::string> inputToPostfix (const std::string& fileName){
     return postfix;
 }
 \end{lstlisting}
+\subsection{Question 2.3}
+Add in error checking to confirm the entered string can be interpreted as RPN string.
+\subsubsection{Answer.}
+The structure of $\lstinline{try, catch, throw}$ serves as error checking. Errors are defined from $\lstinline{ROPN}$ function. Everytime an error happen, there will be a throw of $\lstinline{std::runtime_error}$ which then will be catched in main fucntion using $\lstinline{e.what()}r$ . The list of errors are described in the code snippets below:
+\begin{lstlisting}	
+	if (s.size() < 2){//each operator require 2 operands
+    		throw std::runtime_error("Not enough operands"); 
+     }
+\end{lstlisting}
+\begin{lstlisting}	
+   if (secondOperand == 0){
+  		throw std::runtime_error("Attempt to divide by zero.");
+   }
+\end{lstlisting}
+\begin{lstlisting}	
+   if (s.size() != 1){//last element to be pop out after arithmethic operation is the result
+        throw std::runtime_error("Invalid Input");
+    }                       
+\end{lstlisting}
+\subsection{Question 2.4}
+Add in support for the power operator using the symbol $^$
+\subsubsection{Answer.}
+RPN evaluator does not need an order to be defined for operations. Thus to add in support for the power operator using the symbol $^$ we only need to add a case in arithmetic operation $\lstinline{switch}$ and a check of the symbol $^$ in $\lstinline{bool isoperator(char arg)}$.
+
+\begin{lstlisting}[title = $\lstinline{isoperator}$]
+bool isoperator(char arg){
+    if(arg == '*' || arg == '/' || arg == '+' || arg == '-' || || arg == '^'){ 
+        return(1);
+    }
+    else{ 
+        return(0);
+    }
+}                      
+\end{lstlisting}
+
+\begin{lstlisting}	
+   case ('^'):
+   		ans = std::pow(firstOperand, secondOperand);
+    		break;                    
+\end{lstlisting}
+\subsection{Question 2.5}
+Extend your code so that it can read input strings in normal brackets notation. It should
+understand the BODMAS rules.
+\subsubsection{Answer.}
+The question consists of two steps: the first step is to convert infix to postfix notation and the second step is perfrom RPN evaluator. The latter step is already done in upto question 2.4. For the first step, fucntion $\lstinline{infixToPostfix}$ were built. Another function $\lstinline{precendence}$ to determine an order for operations the before we can implement Shunting-yard \cite[]{kushwaha2014}, which was also invented by Edsger Dijkstra. We aslo need a function to read infix notation from file also the code for this question will handle both user input and data file. The fucntions needed for infix notation calculator for integers are listed below:
+\begin{lstlisting}
+std::vector<std::string> inputToInfix (const std::string& fileName);
+std::string infixToPostfix(std::string& infix); 
+bool isoperator(char arg);
+int precendence(char& arg);
+double RPN (const std::vector<std::string>& expr);
+std::vector<std::string> parserPostFix(std::string& postfix);
+int getFSMCol(char& currentChar); 
+\end{lstlisting}
+The $\lstinline{precendence}$ is simply to assign value to operator characters following BODMAS rule using $\lstinline{switch}$ . Note that brackets were not assigned a value because it will be processed seperately in $\lstinline{infixToPostfix}$. The function $\lstinline{infixToPostfix}$ also serves as another error checking espically for unexpected and imbalance breackets. Fucntion $\lstinline{precendence}$ and code snippets of $\lstinline{infixToPostfix}$ are listed below:
+\begin{lstlisting}[title = $\lstinline{precendence}$]
+int precendence(char& arg){//Add weight to the operator
+    int weight = 0;
+    switch(arg){
+    case '^':
+        weight = 3;
+        break;
+    case '*':
+    case '/':
+        weight = 2;
+        break;
+    case '+':
+    case '-':
+        weight = 1;
+        break;
+    }
+    return(weight);
+}
+\end{lstlisting}
+
+\begin{lstlisting}
+	while((!s.empty())&&(precendence(infix[i]) <= precendence(s.top()))){
+	      postfix+= s.top();//add to RPN expression
+              s.pop();
+     }
+\end{lstlisting}
+\begin{lstlisting}
+	else if(infix[i] == '('){
+            if (expectingOperator == true){
+                throw std::runtime_error("Operator Missing");
+            }
+            s.push(infix[i]);
+        }
+        else if(infix[i] == ')'){
+            if (expectingOperator == false){
+                throw std::runtime_error("Operand Missing");
+            }
+            while((!s.empty()) && (s.top() != '(')){
+	        postfix += s.top();		
+		s.pop();
+            }
+            if(s.empty()){
+                throw std::runtime_error("Parentheses Mismatch");
+            }
+            s.pop();
+            expectingOperator = true;
+        }
+        else{//no operator                        
+            throw std::runtime_error("Only integers and +,-,*,/,^ are allowed");
+        }
+\end{lstlisting}
+\begin{lstlisting}
+	while(!s.empty()){
+            if (s.top() == '('){
+                throw std::runtime_error("Parentheses Mismatch");
+            }
+            postfix+= s.top();
+            s.pop();//pop everything from stack to complete RPN expression
+        }
+\end{lstlisting}
+        
 \section{Exercise 3}
 \subsection{Question 3.1}
 Use any algorithm to compute the shortest distance between every set of cities and write this information to disk with the route as a list of cities.

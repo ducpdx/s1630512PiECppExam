@@ -35,6 +35,7 @@ double RPN (const std::vector<std::string>& expr);
 std::vector<std::string> parserPostFix(std::string& postfix);
 int getFSMCol(char& currentChar);
 std::vector<std::string> inputToPostfix (const std::string& fileName);
+bool isoperator(char arg);
 
 int main(){    
     std::string fileName ="postfix.data";

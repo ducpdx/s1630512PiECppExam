@@ -7,6 +7,7 @@
 *******************************************************************************/
 #include <iostream>
 #include <cmath>
+#include <math.h>
 #include <ctype.h>
 #include <sstream>
 #include <fstream>
@@ -34,20 +35,31 @@ std::array <std::array<int,5>, 5> stateTable=
 double RPN (const std::vector<std::string>& expr);
 std::vector<std::string> parserPostFix(std::string& postfix);
 int getFSMCol(char& currentChar);
+std::vector<std::string> inputToPostfix (const std::string& fileName);
 bool isoperator(char arg);
 
 int main(){    
-    std::string postfix;
-    std::cout<<"Enter a postfix expression:"<<std::endl;
-    std::getline(std::cin,postfix);
-    std::vector<std::string> expr = parserPostFix(postfix);      
-    std::cout << std::endl <<"Output:" << std::endl;
-    std::cout<<postfix<<" = "<< RPN(expr) << std::endl;      
+    try{
+        std::string fileName ="postfix.data";
+        std::vector<std::string> postfixFromFile = inputToPostfix(fileName);
+        std::cout<< std::endl <<"Getting postfix expression from input file...";
+        for (int i = 0; i < postfixFromFile.size(); i++){
+            std::cout  << std::endl << postfixFromFile[i];
+        }
+        std::cout<< std::endl <<"Output:" << std::endl;
+        for (int i = 0; i < postfixFromFile.size(); i++){
+            std::vector<std::string>exprFromFile = parserPostFix(postfixFromFile[i]);      
+            std::cout << postfixFromFile[i] << " = " << RPN(exprFromFile) << std::endl;
+        }
+    }
+    catch (std::exception& e){
+        std::cout << std::endl <<"Error: " << std::endl<< e.what() << std::endl;
+    }
 }
     
 
 bool isoperator(char arg){
-    if(arg == '*' || arg == '/' || arg == '+' || arg == '-'){ 
+    if(arg == '*' || arg == '/' || arg == '+' || arg == '-' || arg == '^'){ 
         return(1);
     }
     else{ 
@@ -66,32 +78,46 @@ double RPN (const std::vector<std::string>& expr){
         }
         else if((expr[i].length() > 1) && ((expr[i][0] == '-') &&
             (isdigit(expr[i][1]) || (expr[i][1] == '.')))){
-           s.push(atof(expr[i].c_str()));//convert to integer
+           s.push(atof(expr[i].c_str()));
         }
-        else if(isoperator(expr[i][0]) && (!s.empty())){   
-            char token = expr[i][0];
-            double secondOperand = s.top();
-            s.pop();
-            double firstOperand = s.top();
-            s.pop();
-            switch(token){
-                case ('+'):
-                    ans = firstOperand + secondOperand; 
-                    break;
-                case ('-'):
-                    ans = firstOperand - secondOperand;
-                    break;
-                case ('*'):
-                    ans = firstOperand * secondOperand;
-                    break;
-                case ('/'):
-                    if (secondOperand == 0){
-                    }
-                    ans = firstOperand / secondOperand;
-                    break;
+        else if(isoperator(expr[i][0]) && (!s.empty())){
+            if (s.size() < 2){
+                throw std::runtime_error("Not enough operands"); 
             }
-            s.push(ans);
+            else{
+                char token = expr[i][0];
+                double secondOperand = s.top();
+                s.pop();
+                double firstOperand = s.top();
+                s.pop();
+                switch(token){
+                    case ('+'):
+                        ans = firstOperand + secondOperand; 
+                        break;
+                    case ('-'):
+                        ans = firstOperand - secondOperand;
+                        break;
+                    case ('*'):
+                        ans = firstOperand * secondOperand;
+                        break;
+                    case ('/'):
+                        if (secondOperand == 0){
+                            throw std::runtime_error
+                                ("Attempt to divide by zero.");
+                        }
+                        ans = firstOperand / secondOperand;
+                        break;
+                    case ('^'):
+                        ans = std::pow(firstOperand, secondOperand);
+                        break;
+                }
+                s.push(ans);
+            }
         }
+    }
+    if (s.size() != 1){//error checking based on RPN eval stack, last element
+        //is the result
+        throw std::runtime_error("Invalid Input");
     }
     if(!s.empty()){
         answer = s.top();
@@ -147,4 +173,14 @@ int getFSMCol(char& currentChar){
         //avoid void return warning, this wont happen thanks to error checking 
         return -1;
     }
+}
+
+std::vector<std::string> inputToPostfix (const std::string& fileName){
+    std::vector<std::string> postfix;
+    std::ifstream fileIn(fileName);
+    std::string line;
+    while (std::getline(fileIn , line)){
+        postfix.push_back(line);
+    }
+    return postfix;
 }

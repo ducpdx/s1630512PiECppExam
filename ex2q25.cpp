@@ -99,7 +99,7 @@ std::string infixToPostfix(std::string &infix){
             postfix+=" ";
             while((!s.empty())&&(precendence(infix[i]) <= precendence(s.top())))
             {
-	      postfix+= s.top();
+	      postfix+= s.top();//add to RPN expression
               s.pop();
             }
             s.push(infix[i]);
